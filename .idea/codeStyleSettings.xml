@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectCodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value>
+        <PHPCodeStyleSettings>
+          <option name="LOWER_CASE_BOOLEAN_CONST" value="true" />
+          <option name="LOWER_CASE_NULL_CONST" value="true" />
+          <option name="BLANK_LINE_BEFORE_RETURN_STATEMENT" value="true" />
+        </PHPCodeStyleSettings>
+        <codeStyleSettings language="PHP">
+          <option name="KEEP_LINE_BREAKS" value="false" />
+          <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
+          <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
+          <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="0" />
+          <option name="BLANK_LINES_AFTER_PACKAGE" value="1" />
+          <option name="CLASS_BRACE_STYLE" value="1" />
+          <option name="METHOD_BRACE_STYLE" value="1" />
+          <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+          <indentOptions>
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="SMART_TABS" value="true" />
+          </indentOptions>
+          <arrangement>
+            <groups>
+              <group>
+                <type>GETTERS_AND_SETTERS</type>
+                <order>KEEP</order>
+              </group>
+              <group>
+                <type>DEPENDENT_METHODS</type>
+                <order>DEPTH_FIRST</order>
+              </group>
+            </groups>
+            <rules>
+              <rule>
+                <match>
+                  <TYPE>CONST</TYPE>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>FIELD</TYPE>
+                    <MODIFIER>PUBLIC</MODIFIER>
+                    <MODIFIER>STATIC</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>FIELD</TYPE>
+                    <MODIFIER>PROTECTED</MODIFIER>
+                    <MODIFIER>STATIC</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>FIELD</TYPE>
+                    <MODIFIER>PRIVATE</MODIFIER>
+                    <MODIFIER>STATIC</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>FIELD</TYPE>
+                    <MODIFIER>PUBLIC</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>FIELD</TYPE>
+                    <MODIFIER>PROTECTED</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>FIELD</TYPE>
+                    <MODIFIER>PRIVATE</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <TYPE>CONSTRUCTOR</TYPE>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>METHOD</TYPE>
+                    <MODIFIER>PUBLIC</MODIFIER>
+                    <MODIFIER>STATIC</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>METHOD</TYPE>
+                    <MODIFIER>PROTECTED</MODIFIER>
+                    <MODIFIER>STATIC</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>METHOD</TYPE>
+                    <MODIFIER>PRIVATE</MODIFIER>
+                    <MODIFIER>STATIC</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>METHOD</TYPE>
+                    <MODIFIER>PUBLIC</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>METHOD</TYPE>
+                    <MODIFIER>PROTECTED</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <AND>
+                    <TYPE>METHOD</TYPE>
+                    <MODIFIER>PRIVATE</MODIFIER>
+                  </AND>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <TYPE>TRAIT</TYPE>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <TYPE>INTERFACE</TYPE>
+                </match>
+              </rule>
+              <rule>
+                <match>
+                  <TYPE>CLASS</TYPE>
+                </match>
+              </rule>
+            </rules>
+          </arrangement>
+        </codeStyleSettings>
+      </value>
+    </option>
+    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+  </component>
+</project>
+
