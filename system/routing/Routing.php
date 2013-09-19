@@ -17,5 +17,6 @@ class Routing {
 
 	function route() {
 		$uri = $_SERVER['REQUEST_URI'];
+
 	}
 }
