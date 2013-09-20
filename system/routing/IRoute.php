@@ -12,6 +12,8 @@ if (!defined("SF_INIT")) {
 }
 
 interface IRoute {
+	public function __construct($uri);
+
 	public function route($uri);
 
 	public function ruleMatches($uri);

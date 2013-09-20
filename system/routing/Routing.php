@@ -21,12 +21,12 @@ class Routing {
 		$this->addRoutes($system->getApplication()->getRoutes());
 	}
 
-	function addRoute($uri, $path) {
-		$this->addRoutes(array($uri => $path));
-	}
-
 	function addRoutes($array) {
 		$this->routes = array_merge($array, $this->routes);
+	}
+
+	function addRoute($uri, $class) {
+		$this->addRoutes(array($uri => $class));
 	}
 
 	// TODO: Come up with a better name for this function and/or figure out a better way to start traveling in the framework.
@@ -35,7 +35,6 @@ class Routing {
 		// TODO: Auto detection with /index.php/
 		$uri = str_replace(BASE_URI, '', $_SERVER['REQUEST_URI']);
 		$goto = null;
-		$defaultMode = false;
 		if ($uri != "") {
 			if (isset($uri, $this->routes[$uri])) {
 				$goto = $this->routes[$uri];
@@ -45,7 +44,6 @@ class Routing {
 				die("The default template does not exist. What happened?");
 			}
 			$goto = $this->routes["default"];
-			$defaultMode = true;
 		}
 
 		if ($goto == null || $goto != $this->routes["default"] && !$goto->ruleMatches($uri) == 1) {
