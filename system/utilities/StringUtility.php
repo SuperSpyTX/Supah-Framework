@@ -9,6 +9,7 @@ namespace Supah_Framework\utilities;
 
 
 class StringUtility {
+	// From stackoverflow
 	function startsWith($haystack, $needle) {
 		return $needle === "" || strpos($haystack, $needle) === 0;
 	}
