@@ -7,22 +7,21 @@
 
 namespace Supah_Framework;
 
-// TODO: Delegate these includes elsewhere!
-
-// include everything here for now.  This way all the necessary components are loaded.
-include(SYSTEM_DIR."application\Application.php");
-include(SYSTEM_DIR."routing\Routing.php");
+if (!defined("SF_INIT")) {
+	die("SF_INIT not detected.");
+}
 
 class System {
 	private $base_application;
 	private $routing;
-	private $modules;
+	private $utilities;
 
 	function __construct($base_application_path) {
 		if ($this->base_application == null) {
 			require_once($base_application_path);
-			$this->base_application = getApplication($this);
+			$this->base_application = $application($this);
 			$this->routing = new Routing($this);
+			$this->utilities = new Utilities($this);
 		}
 	}
 
@@ -32,5 +31,9 @@ class System {
 
 	function getRouting() {
 		return $this->routing;
+	}
+
+	function getUtilities() {
+		return $this->utilities;
 	}
 }

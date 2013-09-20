@@ -5,10 +5,17 @@
  * @author SuperSpyTX
  */
 
-// Include all the things!
+if (!defined("SF_INIT")) {
+	die("SF_INIT not detected.");
+}
 
-include_once(SYSTEM_DIR . "System.php");
+// Include all the things!
+include(SYSTEM_DIR . "System.php");
+include(SYSTEM_DIR . "application\IApplication.php");
+include(SYSTEM_DIR . "routing\Routing.php");
+include(SYSTEM_DIR . "routing\IRoute.php");
+include(SYSTEM_DIR . "utilities\StringUtility.php");
+include(SYSTEM_DIR . "utilities\Utilities.php");
 
 // Initialize all the things!
-
-$system = new Supah_Framework\System(APP_DIR . APP_FILE);
+$system = new Supah_Framework\System(APP_DIR . "init.php");

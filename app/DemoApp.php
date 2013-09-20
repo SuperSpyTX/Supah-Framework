@@ -1,11 +1,15 @@
 <?php
 /**
  * Class DemoApp.php
- * 
+ *
  * @author SuperSpyTX
  */
 
-class DemoApp implements Supah_Framework\Application {
+if (!defined("SF_INIT")) {
+	die("SF_INIT not detected.");
+}
+
+class DemoApp implements Supah_Framework\IApplication {
 	private $system;
 
 	function __construct($system) {
@@ -17,10 +21,6 @@ class DemoApp implements Supah_Framework\Application {
 	}
 
 	public function getRoutes() {
-		return array("routetest" => APP_DIR."routing/routetest.php");
+		return array("default" => new DefaultRoute(), "routetest" => new RouteTest());
 	}
-}
-
-function getApplication($system) {
-	return new DemoApp($system);
 }
