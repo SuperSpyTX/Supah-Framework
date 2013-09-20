@@ -5,7 +5,7 @@
  * @author SuperSpyTX
  */
 
-namespace Supah_Framework\application;
+namespace Supah_Framework;
 
 
 interface Application {

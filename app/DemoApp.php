@@ -5,7 +5,7 @@
  * @author SuperSpyTX
  */
 
-class DemoApp implements Supah_Framework\application\Application {
+class DemoApp implements Supah_Framework\Application {
 	private $system;
 
 	function __construct($system) {

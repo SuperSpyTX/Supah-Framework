@@ -13,7 +13,7 @@ class Routing {
 
 	function __construct($system) {
 		$this->system = $system;
-		$this->routes = array('default' => 'routing/default.php');
+		$this->routes = array('default' => APP_DIR . 'routing/default.php');
 		$this->addRoutes($system->getApplication()->getRoutes());
 	}
 
