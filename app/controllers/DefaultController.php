@@ -10,8 +10,7 @@ if (!defined("SF_INIT")) {
 }
 
 class DefaultController implements Supah_Framework\application\IController {
-	private $uri;
-	private $args;
+	private $uri, $args;
 
 	function __construct($uri, $args) {
 		$this->uri = $uri;

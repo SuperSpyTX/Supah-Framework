@@ -22,6 +22,6 @@ class DefaultRoute implements Supah_Framework\routing\IRoute {
 	}
 
 	public function ruleMatches($uri) {
-		return Supah_Framework\utilities\StringUtility::startsWith($uri, $this->uri);
+		return true;
 	}
 }

@@ -47,8 +47,10 @@ class Routing {
 		}
 
 		if ($goto == null || $goto != $this->routes["default"] && !$goto->ruleMatches($uri) == 1) {
-			// TODO: 404 page template.
-			die("TODO: 404 page template.");
+			if (!isset($this->routes["error"])) {
+				die("The error template does not exist. What happened?");
+			}
+			$goto = $this->routes["error"];
 		}
 
 		$goto->route($uri);

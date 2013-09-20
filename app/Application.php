@@ -22,6 +22,6 @@ class DemoApplication implements Supah_Framework\application\IApplication {
 
 	public function getRoutes() {
 		// TODO: custom configuration for application URIs.
-		return array("default" => new DefaultRoute("default"), "routetest" => new RouteTest("routetest"), "joeks" => new JokesRoute("joeks"));
+		return array("default" => new DefaultRoute("default"), "error" => new RouteError("error"), "routetest" => new RouteTest("routetest"), "joeks" => new JokesRoute("joeks"));
 	}
 }
