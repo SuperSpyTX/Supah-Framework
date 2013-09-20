@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/routing/IRoute.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/utilities/Utilities.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DemoApp.php" afterPath="$PROJECT_DIR$/app/DemoApp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/routing/Routing.php" afterPath="$PROJECT_DIR$/system/routing/Routing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/utilities/StringUtility.php" afterPath="$PROJECT_DIR$/system/utilities/StringUtility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/System.php" afterPath="$PROJECT_DIR$/system/System.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.inc.php" afterPath="$PROJECT_DIR$/config.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routing/default.php" afterPath="$PROJECT_DIR$/app/routing/default.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/init.php" afterPath="$PROJECT_DIR$/system/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routing/routetest.php" afterPath="$PROJECT_DIR$/app/routing/routetest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Web\xampplite\htdocs\supahframework\system\application\Application.php" afterPath="$PROJECT_DIR$/system/application/IApplication.php" />
+      <change type="MOVED" beforePath="D:\Web\xampplite\htdocs\supahframework\system\templates\templates.php" afterPath="$PROJECT_DIR$/system/templates/Templates.php" />
     </list>
     <ignored path="supahframework.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +31,7 @@
     <file path="/.htaccess" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379608261847" ignored="false" />
     <file path="/StringUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379646053057" ignored="false" />
     <file path="/index.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379645833389" ignored="false" />
-    <file path="/default.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379647849705" ignored="false" />
+    <file path="/default.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379646850053" ignored="false" />
     <file path="/System.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379646619331" ignored="false" />
     <file path="/Application.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379639127228" ignored="false" />
     <file path="/DemoApplication.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379638848011" ignored="false" />
@@ -30,7 +43,6 @@
     <file path="/IApplication.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379644031194" ignored="false" />
     <file path="/IRoute.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379644626006" ignored="false" />
     <file path="/Utilities.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379645979974" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379647864100" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +62,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routetest.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="routetest.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routing/routetest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="1" selection-start="122" selection-end="122" vertical-scroll-proportion="-3.2692308">
+            <state line="14" column="5" selection-start="387" selection-end="387" vertical-scroll-proportion="0.3096539">
               <folding />
             </state>
           </provider>
@@ -97,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routing/default.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="5" selection-start="624" selection-end="624" vertical-scroll-proportion="0.5074627">
+            <state line="13" column="22" selection-start="224" selection-end="264" vertical-scroll-proportion="-8.5">
               <folding>
                 <element signature="e#6#59#0" expanded="true" />
               </folding>
@@ -186,8 +198,8 @@
         <option value="$PROJECT_DIR$/system/init.php" />
         <option value="$PROJECT_DIR$/system/System.php" />
         <option value="$PROJECT_DIR$/app/init.php" />
-        <option value="$PROJECT_DIR$/app/routing/routetest.php" />
         <option value="$PROJECT_DIR$/app/routing/default.php" />
+        <option value="$PROJECT_DIR$/app/routing/routetest.php" />
       </list>
     </option>
   </component>
@@ -648,19 +660,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routing/routetest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="122" selection-end="122" vertical-scroll-proportion="-3.2692308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routing/default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="5" selection-start="624" selection-end="624" vertical-scroll-proportion="0.5074627">
+        <state line="13" column="22" selection-start="224" selection-end="264" vertical-scroll-proportion="-8.5">
           <folding>
             <element signature="e#6#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routing/routetest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="387" selection-end="387" vertical-scroll-proportion="0.3096539">
+          <folding />
         </state>
       </provider>
     </entry>
