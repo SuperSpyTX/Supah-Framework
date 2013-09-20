@@ -14,12 +14,14 @@ if (!defined("SF_INIT")) {
 class System {
 	private $base_application;
 	private $routing;
+	private $templates;
 
 	function __construct($base_application_path) {
 		if ($this->base_application == null) {
 			require_once($base_application_path);
 			$this->base_application = $application($this);
 			$this->routing = new Routing($this);
+			$this->templates = new Templates($this);
 		}
 	}
 
@@ -29,5 +31,9 @@ class System {
 
 	function getRouting() {
 		return $this->routing;
+	}
+
+	function getTemplates() {
+		return $this->templates;
 	}
 }

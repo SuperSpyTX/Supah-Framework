@@ -2,36 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" name="Default" comment="Begin work on route parsing.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/routing/IRoute.php" afterPath="$PROJECT_DIR$/system/routing/IRoute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/routing/Routing.php" afterPath="$PROJECT_DIR$/system/routing/Routing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/DefaultController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routing/DefaultRoute.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/utilities/GenerationUtility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/application/IController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/jokes/JokesController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routing/jokes/JokesRoute.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/templates/Page.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/templates/Templates.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/jokes/content.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/default.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/default_welcome_message.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/jokes/madbros.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/jokes/smallpenis.tmpl" />
+      <change type="DELETED" beforePath="D:\Web\xampplite\htdocs\supahframework\app\routing\default.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Web\xampplite\htdocs\supahframework\system\templates\templates.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Application.php" afterPath="$PROJECT_DIR$/app/Application.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/application/IApplication.php" afterPath="$PROJECT_DIR$/system/application/IApplication.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/utilities/StringUtility.php" afterPath="$PROJECT_DIR$/system/utilities/StringUtility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/System.php" afterPath="$PROJECT_DIR$/system/System.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/init.php" afterPath="$PROJECT_DIR$/app/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/init.php" afterPath="$PROJECT_DIR$/system/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Web\xampplite\htdocs\supahframework\app\routing\routetest.php" afterPath="$PROJECT_DIR$/app/routing/RouteTest.php" />
     </list>
     <ignored path="supahframework.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379565365284" ignored="false" />
-    <file path="/a.dummy" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379678020806" ignored="false" />
+    <file path="/a.dummy" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709984001" ignored="false" />
     <file path="/templates.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379564901307" ignored="false" />
     <file path="/system.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379564427132" ignored="false" />
     <file path="/configuration.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379564442160" ignored="false" />
     <file path="/default.template.script.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379564618332" ignored="false" />
-    <file path="/Dummy.txt" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379648951161" ignored="false" />
+    <file path="/Dummy.txt" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379705386138" ignored="false" />
     <file path="/Routing.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379679206645" ignored="false" />
-    <file path="/routetest.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379678616034" ignored="false" />
-    <file path="/.htaccess" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379608261847" ignored="false" />
-    <file path="/StringUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379678597864" ignored="false" />
+    <file path="/routetest.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379705415815" ignored="false" />
+    <file path="/.htaccess" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379706835398" ignored="false" />
+    <file path="/StringUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379705404288" ignored="false" />
     <file path="/index.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379645833389" ignored="false" />
-    <file path="/default.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379678497372" ignored="false" />
-    <file path="/System.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379678644027" ignored="false" />
-    <file path="/Application.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379678369778" ignored="false" />
+    <file path="/default.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709929003" ignored="false" />
+    <file path="/System.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379706028943" ignored="false" />
+    <file path="/Application.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379710001744" ignored="false" />
     <file path="/DemoApplication.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379638848011" ignored="false" />
     <file path="/DemoApp.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379646564914" ignored="false" />
     <file path="/ClassUtilities.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379639547267" ignored="false" />
-    <file path="/init.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379677951967" ignored="false" />
+    <file path="/init.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379710191004" ignored="false" />
     <file path="/config.inc.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379677916018" ignored="false" />
-    <file path="/Templates.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379644091911" ignored="false" />
-    <file path="/IApplication.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379644031194" ignored="false" />
+    <file path="/Templates.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709067506" ignored="false" />
+    <file path="/IApplication.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379704332685" ignored="false" />
     <file path="/IRoute.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379679183004" ignored="false" />
     <file path="/Utilities.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379645979974" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379679343902" ignored="false" />
+    <file path="/Page.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709231890" ignored="false" />
+    <file path="/default.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379707312680" ignored="false" />
+    <file path="/TemplatesUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379708721937" ignored="false" />
+    <file path="/IController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379705770010" ignored="false" />
+    <file path="/DefaultPageHandler.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709275840" ignored="false" />
+    <file path="/header.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379706999672" ignored="false" />
+    <file path="/DefaultHandler.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379707701876" ignored="false" />
+    <file path="/samplecontent.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709325528" ignored="false" />
+    <file path="/madbros.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379708434298" ignored="false" />
+    <file path="/GenerationUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379708610616" ignored="false" />
+    <file path="/JokesController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709608084" ignored="false" />
+    <file path="/Jokes.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379710259709" ignored="false" />
+    <file path="/content.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379710111473" ignored="false" />
+    <file path="/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379710624106" ignored="false" />
+    <file path="/default_welcome_message.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379710672642" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,40 +87,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routetest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routing/routetest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="-5.8846154">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringUtility.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/utilities/StringUtility.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="18" selection-start="356" selection-end="356" vertical-scroll-proportion="-11.769231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Application.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="59" selection-start="419" selection-end="419" vertical-scroll-proportion="-12.423077">
+            <state line="15" column="32" selection-start="280" selection-end="280" vertical-scroll-proportion="-7.1923075">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Routing.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/system/routing/Routing.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="9" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.69822484">
-              <folding>
-                <element signature="e#6#59#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -92,52 +99,83 @@
       <file leaf-file-name="init.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="2" selection-start="400" selection-end="400" vertical-scroll-proportion="-9.807693">
+            <state line="17" column="37" selection-start="393" selection-end="393" vertical-scroll-proportion="-8.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IApplication.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/application/IApplication.php">
+      <file leaf-file-name="DefaultRoute.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routing/DefaultRoute.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="1" selection-start="240" selection-end="240" vertical-scroll-proportion="-8.5">
+            <state line="21" column="5" selection-start="375" selection-end="375" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="System.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/System.php">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="210" selection-end="210" vertical-scroll-proportion="-7.1923075">
+            <state line="26" column="115" selection-start="691" selection-end="691" vertical-scroll-proportion="-17.0">
+              <folding>
+                <element signature="e#6#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default_welcome_message.tmpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/default_welcome_message.tmpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="110" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IRoute.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/routing/IRoute.php">
+      <file leaf-file-name="default.tmpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/default.tmpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="11" selection-start="184" selection-end="184" vertical-scroll-proportion="-6.5384617">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routing/default.php">
+      <file leaf-file-name="JokesRoute.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routing/jokes/JokesRoute.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="5" selection-start="564" selection-end="564" vertical-scroll-proportion="-10.461538">
+            <state line="21" column="5" selection-start="496" selection-end="496" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/init.php">
+      <file leaf-file-name="Routing.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/routing/Routing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="52" selection-start="377" selection-end="377" vertical-scroll-proportion="-7.8461537">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.3846154">
+              <folding>
+                <element signature="e#6#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JokesController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/jokes/JokesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="-9.807693">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.tmpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/jokes/content.tmpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="81" selection-start="81" selection-end="81" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -167,22 +205,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/system/application/Application.php" />
-        <option value="$PROJECT_DIR$/system/application/IApplication.php" />
+        <option value="$PROJECT_DIR$/system/utilities/GenerationUtility.php" />
         <option value="$PROJECT_DIR$/system/templates/Templates.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/system/utilities/Utilities.php" />
-        <option value="$PROJECT_DIR$/app/DemoApp.php" />
-        <option value="$PROJECT_DIR$/config.inc.php" />
-        <option value="$PROJECT_DIR$/app/init.php" />
         <option value="$PROJECT_DIR$/system/utilities/StringUtility.php" />
-        <option value="$PROJECT_DIR$/system/init.php" />
-        <option value="$PROJECT_DIR$/system/System.php" />
-        <option value="$PROJECT_DIR$/app/routing/routetest.php" />
         <option value="$PROJECT_DIR$/app/routing/default.php" />
+        <option value="$PROJECT_DIR$/app/routing/RouteTest.php" />
+        <option value="$PROJECT_DIR$/system/application/IController.php" />
+        <option value="$PROJECT_DIR$/app/routing/Jokes.php" />
+        <option value="$PROJECT_DIR$/app/routing/Default.php" />
+        <option value="$PROJECT_DIR$/app/routing/DefaultRoute.php" />
+        <option value="$PROJECT_DIR$/app/controllers/jokes/JokesController.php" />
         <option value="$PROJECT_DIR$/app/Application.php" />
-        <option value="$PROJECT_DIR$/system/routing/IRoute.php" />
-        <option value="$PROJECT_DIR$/system/routing/Routing.php" />
+        <option value="$PROJECT_DIR$/app/templates/jokes/content.tmpl" />
+        <option value="$PROJECT_DIR$/app/init.php" />
+        <option value="$PROJECT_DIR$/app/routing/jokes/JokesRoute.php" />
+        <option value="$PROJECT_DIR$/app/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/app/templates/default_welcome_message.tmpl" />
       </list>
     </option>
   </component>
@@ -371,7 +409,109 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jokes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="routing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jokes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supahframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jokes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,15 +524,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="last_opened_file_path" value="B:/Program Files (x86)/Git/bin/git.exe" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Web\xampplite\htdocs\supahframework\app\routing\jokes" />
+      <recent name="D:\Web\xampplite\htdocs\supahframework\app\templates\jokes" />
       <recent name="D:\Web\xampplite\htdocs\supahframework" />
       <recent name="D:\Web\xampplite\htdocs\supahframework\app\routing" />
       <recent name="D:\Web\xampplite\htdocs\supahframework\app" />
-      <recent name="D:\Web\xampplite\htdocs\supahframework\system\routing" />
     </key>
   </component>
   <component name="RunManager">
@@ -401,6 +543,13 @@
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -457,24 +606,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2524013" sideWeight="0.6718576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2524013" sideWeight="0.6722408" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -542,114 +691,119 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system/init.php">
+    <entry file="file://$PROJECT_DIR$/system/application/IController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="48" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
+        <state line="15" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="-7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
+    <entry file="file://$PROJECT_DIR$/app/routing/RouteTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+        <state line="15" column="0" selection-start="237" selection-end="257" vertical-scroll-proportion="-7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/templates/Templates.php">
+    <entry file="file://$PROJECT_DIR$/system/utilities/GenerationUtility.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="49" selection-start="350" selection-end="350" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <element signature="e#6#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="299" selection-end="299" vertical-scroll-proportion="0.22130178">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="841" selection-end="841" vertical-scroll-proportion="0.76094675">
-          <folding>
-            <element signature="e#6#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="2" selection-start="400" selection-end="400" vertical-scroll-proportion="-9.807693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/application/IApplication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="240" selection-end="240" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="52" selection-start="377" selection-end="377" vertical-scroll-proportion="-7.8461537">
+        <state line="19" column="47" selection-start="408" selection-end="408" vertical-scroll-proportion="-9.807693">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/System.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="210" selection-end="210" vertical-scroll-proportion="-7.1923075">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/utilities/StringUtility.php">
+    <entry file="file://$PROJECT_DIR$/app/templates/jokes/smallpenis.tmpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="356" selection-end="356" vertical-scroll-proportion="-11.769231">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routing/default.php">
+    <entry file="file://$PROJECT_DIR$/app/templates/jokes/madbros.tmpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="564" selection-end="564" vertical-scroll-proportion="-10.461538">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routing/routetest.php">
+    <entry file="file://$PROJECT_DIR$/app/templates/jokes/content.tmpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="-5.8846154">
+        <state line="0" column="81" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="37" selection-start="393" selection-end="393" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="59" selection-start="419" selection-end="419" vertical-scroll-proportion="-12.423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/routing/IRoute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="184" selection-end="184" vertical-scroll-proportion="-6.5384617">
+        <state line="15" column="32" selection-start="280" selection-end="280" vertical-scroll-proportion="-7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/routing/Routing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="9" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.69822484">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.3846154">
           <folding>
             <element signature="e#6#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/jokes/JokesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routing/jokes/JokesRoute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="496" selection-end="496" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/default.tmpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routing/DefaultRoute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="375" selection-end="375" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="115" selection-start="691" selection-end="691" vertical-scroll-proportion="-17.0">
+          <folding>
+            <element signature="e#6#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/default_welcome_message.tmpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="110" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>

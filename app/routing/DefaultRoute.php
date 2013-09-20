@@ -1,6 +1,6 @@
 <?php
 /**
- * Class RouteTest.php
+ * Class DefaultRoute.php
  *
  * @author SuperSpyTX
  */
@@ -9,7 +9,7 @@ if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
-class RouteTest implements Supah_Framework\routing\IRoute {
+class DefaultRoute implements Supah_Framework\routing\IRoute {
 	private $uri;
 
 	public function __construct($uri) {
@@ -17,7 +17,8 @@ class RouteTest implements Supah_Framework\routing\IRoute {
 	}
 
 	public function route($uri) {
-		echo("Congratulations, you routed something correctly today!<br><br> Meanwhile in iTunes... <br><br>\"Singing for the people like us, the people like us!\" - Kelly Clarkson");
+		$controller = new DefaultController($uri, null);
+		$controller->exec();
 	}
 
 	public function ruleMatches($uri) {

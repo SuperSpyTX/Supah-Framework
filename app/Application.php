@@ -9,7 +9,7 @@ if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
-class DemoApplication implements Supah_Framework\IApplication {
+class DemoApplication implements Supah_Framework\application\IApplication {
 	private $system;
 
 	function __construct($system) {
@@ -22,6 +22,6 @@ class DemoApplication implements Supah_Framework\IApplication {
 
 	public function getRoutes() {
 		// TODO: custom configuration for application URIs.
-		return array("default" => new DefaultRoute("default"), "routetest" => new RouteTest("routetest"));
+		return array("default" => new DefaultRoute("default"), "routetest" => new RouteTest("routetest"), "joeks" => new JokesRoute("joeks"));
 	}
 }

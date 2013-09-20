@@ -1,6 +1,6 @@
 <?php
 /**
- * Class IApplication.php
+ * Class IController.php
  *
  * @author SuperSpyTX
  */
@@ -11,8 +11,8 @@ if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
-interface IApplication {
-	public function getName();
+interface IController {
+	function __construct($uri, $args);
 
-	public function getRoutes();
+	function exec();
 }

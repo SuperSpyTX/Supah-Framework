@@ -12,8 +12,12 @@ if (!defined("SF_INIT")) {
 // Include all the things!
 include(SYSTEM_DIR . "System.php");
 include(SYSTEM_DIR . "application\IApplication.php");
+include(SYSTEM_DIR . "application\IController.php");
 include(SYSTEM_DIR . "routing\Routing.php");
 include(SYSTEM_DIR . "routing\IRoute.php");
+include(SYSTEM_DIR . "templates\Page.php");
+include(SYSTEM_DIR . "templates\Templates.php");
+include(SYSTEM_DIR . "utilities\GenerationUtility.php");
 include(SYSTEM_DIR . "utilities\StringUtility.php");
 
 // Initialize all the things!
