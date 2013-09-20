@@ -15,7 +15,6 @@ include(SYSTEM_DIR . "application\IApplication.php");
 include(SYSTEM_DIR . "routing\Routing.php");
 include(SYSTEM_DIR . "routing\IRoute.php");
 include(SYSTEM_DIR . "utilities\StringUtility.php");
-include(SYSTEM_DIR . "utilities\Utilities.php");
 
 // Initialize all the things!
 $system = new Supah_Framework\System(APP_DIR . "init.php");

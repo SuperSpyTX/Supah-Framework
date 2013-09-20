@@ -14,14 +14,12 @@ if (!defined("SF_INIT")) {
 class System {
 	private $base_application;
 	private $routing;
-	private $utilities;
 
 	function __construct($base_application_path) {
 		if ($this->base_application == null) {
 			require_once($base_application_path);
 			$this->base_application = $application($this);
 			$this->routing = new Routing($this);
-			$this->utilities = new Utilities($this);
 		}
 	}
 
@@ -31,9 +29,5 @@ class System {
 
 	function getRouting() {
 		return $this->routing;
-	}
-
-	function getUtilities() {
-		return $this->utilities;
 	}
 }

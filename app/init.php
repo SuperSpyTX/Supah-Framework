@@ -10,11 +10,11 @@ if (!defined("SF_INIT")) {
 }
 
 // Include all the things!
-include(APP_DIR . APP_FILE);
+include(APP_DIR . str_replace(".php", "", APP_FILE).".php");
 include(APP_DIR . "routing/default.php");
 include(APP_DIR . "routing/routetest.php");
 
 // Initialize all the things!
 $application = function($system) {
-	return new DemoApp($system);
+	return new DemoApplication($system);
 };

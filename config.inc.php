@@ -27,16 +27,16 @@ define("BASE_URI", "/supahframework/");
 define("APP_DIR", "app/");
 
 /**
- * The application file name.  This is required to initialize the application.  .php in the name is not required.
- *
- */
-define("APP_FILE", "DemoApp.php");
-
-/**
  * The system directory to load.  This is all the framework files.
  *
  */
 define("SYSTEM_DIR", "system/");
+
+/**
+ * The application file name.  This is required to initialize the application.  .php in the name is not required.
+ *
+ */
+define("APP_FILE", "Application");
 
 /**
  * The debug mode.  Prints message all over the screen.

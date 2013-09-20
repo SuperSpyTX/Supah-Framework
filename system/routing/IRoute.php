@@ -5,7 +5,7 @@
  * @author SuperSpyTX
  */
 
-namespace Supah_Framework;
+namespace Supah_Framework\routing;
 
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");

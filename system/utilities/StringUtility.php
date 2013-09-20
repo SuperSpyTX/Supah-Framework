@@ -14,13 +14,13 @@ if (!defined("SF_INIT")) {
 
 class StringUtility {
 	// From stackoverflow
-	function startsWith($haystack, $needle) {
+	public static function startsWith($haystack, $needle) {
 		$i = $needle === "" || strpos($haystack, $needle) === 0;
 
 		return $i == 1;
 	}
 
-	function endsWith($haystack, $needle) {
+	public static function endsWith($haystack, $needle) {
 		$i = $needle === "" || substr($haystack, -strlen($needle)) === $needle;
 
 		return $i == 1;
