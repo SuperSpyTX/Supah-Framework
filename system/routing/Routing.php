@@ -11,26 +11,47 @@ if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
-class Routing {
+/**
+ * Class Routing
+ * The framework for routing web requests.
+ *
+ * @package Supah_Framework
+ */
+class Routing implements \Supah_Framework\application\IExecutable {
 	private $system;
 	private $routes;
 
+	/**
+	 * Basic constructor.
+	 *
+	 * @param $system The main framework class.
+	 */
 	function __construct($system) {
 		$this->system = $system;
 		$this->routes = array();
-		$this->addRoutes($system->getApplication()->getRoutes());
 	}
 
+	/**
+	 * Adds multiple routes to the list.
+	 *
+	 * @param $array array of routes.
+	 */
 	function addRoutes($array) {
 		$this->routes = array_merge($array, $this->routes);
 	}
 
+	/**
+	 * Adds a route to the list.
+	 *
+	 * @param $uri the URI to route.
+	 * @param $class the route class.
+	 */
 	function addRoute($uri, $class) {
 		$this->addRoutes(array($uri => $class));
 	}
 
 	// TODO: Come up with a better name for this function and/or figure out a better way to start traveling in the framework.
-	function routeRequest() {
+	function exec() {
 		// TODO: Split the URI query.
 		// TODO: Auto detection with /index.php/
 		$uri = str_replace(BASE_URI, '', $_SERVER['REQUEST_URI']);
@@ -53,6 +74,6 @@ class Routing {
 			$goto = $this->routes["error"];
 		}
 
-		$goto->route($uri);
+		$goto->exec($uri);
 	}
 }

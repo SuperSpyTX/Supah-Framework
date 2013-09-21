@@ -12,8 +12,8 @@ class JokesRoute implements \Supah_Framework\routing\IRoute {
 		$this->uri = $uri;
 	}
 
-	public function route($uri) {
-		$controller = new JokesController($uri, array("smallpenises" => "Scetch,hcherndon", "madbros" => "hcherndon"));
+	public function exec() {
+		$controller = new JokesController($this->uri, array("smallpenises" => "Scetch,hcherndon", "madbros" => "hcherndon"));
 		$controller->exec();
 	}
 

@@ -9,10 +9,14 @@ if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
+// TODO: create an dynamic autoloader.
+
 // Include all the things!
+include(SYSTEM_DIR . "application\IExecutable.php");
 include(SYSTEM_DIR . "System.php");
 include(SYSTEM_DIR . "application\IApplication.php");
 include(SYSTEM_DIR . "application\IController.php");
+include(SYSTEM_DIR . "modules\IModule.php");
 include(SYSTEM_DIR . "routing\Routing.php");
 include(SYSTEM_DIR . "routing\IRoute.php");
 include(SYSTEM_DIR . "templates\Page.php");

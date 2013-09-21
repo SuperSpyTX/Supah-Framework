@@ -16,7 +16,7 @@ class RouteTest implements Supah_Framework\routing\IRoute {
 		$this->uri = $uri;
 	}
 
-	public function route($uri) {
+	public function exec() {
 		echo("Congratulations, you routed something correctly today!<br><br> Meanwhile in iTunes... <br><br>\"Singing for the people like us, the people like us!\" - Kelly Clarkson");
 	}
 

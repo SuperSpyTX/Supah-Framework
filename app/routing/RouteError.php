@@ -12,9 +12,9 @@ class RouteError implements \Supah_Framework\routing\IRoute {
 		$this->uri = $uri;
 	}
 
-	public function route($uri) {
+	public function exec() {
 		// TODO: automatically interpret the issue and/or add to constructor?
-		$errorController = new ErrorController($uri, array("error" => "404"));
+		$errorController = new ErrorController($this->uri, array("error" => "404"));
 		$errorController->exec();
 	}
 

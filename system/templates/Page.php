@@ -19,6 +19,7 @@ class Page {
 	function __construct($page_title, $template_name) {
 		$this->template_name = $template_name;
 		$this->template_path = APP_DIR . "templates/" . $template_name . ".tmpl";
+
 		$this->setEntries(($page_title != null ? array('title' => \Supah_Framework\utilities\GenerationUtility::generateTitle($page_title)) : array()));
 	}
 
@@ -52,6 +53,7 @@ class Page {
 
 	function renderPage() {
 		global $system;
+
 		return $system->getTemplates()->renderPage($this);
 	}
 }

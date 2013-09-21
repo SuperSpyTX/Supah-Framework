@@ -11,15 +11,8 @@ if (!defined("SF_INIT")) {
 
 // Include all the things!
 include(APP_DIR . str_replace(".php", "", APP_FILE).".php");
-include(APP_DIR . "controllers/DefaultController.php");
-include(APP_DIR . "controllers/ErrorController.php");
-include(APP_DIR . "routing/DefaultRoute.php");
-include(APP_DIR . "routing/RouteTest.php");
-include(APP_DIR . "routing/RouteError.php");
-
-// Jokes initializer.  TODO: modules?
-include(APP_DIR . "controllers/jokes/JokesController.php");
-include(APP_DIR . "routing/jokes/JokesRoute.php");
+include(APP_DIR . "modules/DefaultModule.php");
+include(APP_DIR . "modules/JokesModule.php");
 
 // Initialize all the things!
 $application = function($system) {

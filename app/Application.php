@@ -16,12 +16,15 @@ class DemoApplication implements Supah_Framework\application\IApplication {
 		$this->system = $system;
 	}
 
+	public function getSystem() {
+		return $this->system;
+	}
+
 	public function getName() {
 		return "Demo Application";
 	}
 
-	public function getRoutes() {
-		// TODO: custom configuration for application URIs.
-		return array("default" => new DefaultRoute("default"), "error" => new RouteError("error"), "routetest" => new RouteTest("routetest"), "joeks" => new JokesRoute("joeks"));
+	public function getModules() {
+		return array('default' => new DefaultModule($this), 'jokes' => new JokesModule($this));
 	}
 }
