@@ -33,6 +33,13 @@ interface IApplication {
 	function getSystem();
 
 	/**
+	 * Gets the configuration class.
+	 *
+	 * @return \Supah_Framework\application\Configuration
+	 */
+	function getConfiguration();
+
+	/**
 	 * Gets the name of the application.
 	 *
 	 * @return string
@@ -40,7 +47,14 @@ interface IApplication {
 	public function getName();
 
 	/**
-	 * Gets the modules included for the Modules system.
+	 * Gets the properly-formatted name of the application.
+	 *
+	 * @return string
+	 */
+	public function getTitle();
+
+	/**
+	 * Gets the modules included in the application.
 	 *
 	 * @return array of modules.
 	 */

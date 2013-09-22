@@ -17,13 +17,21 @@ if (!defined("SF_INIT")) {
  *
  * @package Supah_Framework\routing
  */
-interface IRoute extends \Supah_Framework\application\IExecutable {
+interface IRoute {
 	/**
 	 * Constructor that accepts a URI as an argument
 	 *
-	 * @param $uri
+	 * @param $uri string
+	 * @param $module \Supah_Framework\application\IModule
 	 */
-	public function __construct($uri);
+	public function __construct($uri, $module);
+
+	/**
+	 * Routes the web request to this class.
+	 *
+	 * @return void
+	 */
+	function route($uri);
 
 	/**
 	 * Checks if the URI matches the rules specified in the route.

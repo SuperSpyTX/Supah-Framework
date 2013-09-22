@@ -5,7 +5,7 @@
  * @author SuperSpyTX
  */
 
-namespace Supah_Framework\modules;
+namespace Supah_Framework\application;
 
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
@@ -15,16 +15,30 @@ interface IModule extends \Supah_Framework\application\IExecutable {
 	/**
 	 * Basic constructor.
 	 *
-	 * @param $application \Supah_Framework\application\IApplication-
+	 * @param $application \Supah_Framework\application\IApplication
 	 */
 	function __construct($application);
 
 	/**
-	 * Returns whether the module is enabled or not.
+	 * Gets whether the module is enabled or not.
 	 *
 	 * @return boolean
 	 */
 	function isEnabled();
+
+	/**
+	 * Gets the name of this module.
+	 *
+	 * @return string
+	 */
+	public static function getName();
+
+	/**
+	 * Gets the configuration for this module.
+	 *
+	 * @return \Supah_Framework\application\Configuration
+	 */
+	function getConfiguration();
 
 	/**
 	 * Gets the routes for the Routing class.

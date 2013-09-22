@@ -10,17 +10,18 @@ if (!defined("SF_INIT")) {
 }
 
 class RouteTest implements Supah_Framework\routing\IRoute {
-	private $uri;
+	private $uri, $module;
 
-	public function __construct($uri) {
+	public function __construct($uri, $module) {
 		$this->uri = $uri;
+		$this->module = $module;
 	}
 
-	public function exec() {
+	public function route($uri) {
 		echo("Congratulations, you routed something correctly today!<br><br> Meanwhile in iTunes... <br><br>\"Singing for the people like us, the people like us!\" - Kelly Clarkson");
 	}
 
 	public function ruleMatches($uri) {
-		return Supah_Framework\utilities\StringUtility::startsWith($uri, $this->uri);
+		return true;
 	}
 }

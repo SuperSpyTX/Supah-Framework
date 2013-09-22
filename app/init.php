@@ -10,9 +10,10 @@ if (!defined("SF_INIT")) {
 }
 
 // Include all the things!
-include(APP_DIR . str_replace(".php", "", APP_FILE).".php");
 include(APP_DIR . "modules/DefaultModule.php");
-include(APP_DIR . "modules/JokesModule.php");
+include(APP_DIR . "modules/jokes/JokesModule.php");
+
+include(APP_DIR . "Application.php");
 
 // Initialize all the things!
 $application = function($system) {

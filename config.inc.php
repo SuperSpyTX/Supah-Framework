@@ -21,25 +21,19 @@ if (!defined("SF_INIT")) {
 define("BASE_URI", "/supahframework/");
 
 /**
- * The application directory to load. This is all the application files implementing the framework.
+ * The application directory to load. This is where all the application files lie.
  *
  */
 define("APP_DIR", "app/");
 
 /**
- * The system directory to load.  This is all the framework files.
- *
+ * The system directory to load.  This is where all the framework files lie.
  */
 define("SYSTEM_DIR", "system/");
 
-/**
- * The application file name.  This is required to initialize the application.  .php in the name is not required.
- *
- */
-define("APP_FILE", "Application");
+// Now the main configuration!
 
-/**
- * The debug mode.  Prints message all over the screen.
- *
- */
-define("DEBUG_MODE", "true"); // false for production.
+$CFG['app']['name'] = "demo";
+$CFG['app']['title'] = "Demo Application";
+$CFG['app']['jokes']['smallpenis.custominput'] = "Mojang";
+$CFG['app']['jokes']['madbros.custominput'] = "Everybody";

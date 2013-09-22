@@ -9,7 +9,7 @@ if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
-class DefaultModule implements \Supah_Framework\modules\IModule {
+class DefaultModule implements \Supah_Framework\application\IModule {
 	private $application;
 
 	function __construct($application) {
@@ -27,12 +27,23 @@ class DefaultModule implements \Supah_Framework\modules\IModule {
 		$this->application->getSystem()->getRouting()->addRoutes($this->getRoutes());
 	}
 
+	public static function getName() {
+		return "default";
+	}
+
+	function getConfiguration() {
+		if ($config == null)
+			$this->config = $this->application->getConfiguration()->getConfig($this->getName());
+
+		return $this->config;
+	}
+
 	function isEnabled() {
 		return true;
 	}
 
 	public function getRoutes() {
 		// TODO: configurable application URIs.
-		return array('default' => new DefaultRoute("default"), 'error' => new RouteError("error"), 'routetest' => new RouteTest("routetest"));
+		return array('default' => new DefaultRoute("default", $this), 'error' => new RouteError("error", $this), 'routetest' => new RouteTest("routetest", $this));
 	}
 }

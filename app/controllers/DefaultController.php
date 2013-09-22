@@ -1,7 +1,7 @@
 <?php
 /**
  * Class DefaultController.php
- * 
+ *
  * @author SuperSpyTX
  */
 
@@ -23,7 +23,11 @@ class DefaultController implements Supah_Framework\application\IController {
 
 		$mainPage = $system->getTemplates()->createPage("Default Page", "default");
 		$defaultContent = $system->getTemplates()->createPage(null, "default_welcome_message");
-		$defaultContent->addEntry("jokesURL", \Supah_Framework\utilities\GenerationUtility::generateLink(BASE_URI."joeks", "check this out!"));
+
+		if ($system->isModuleLoaded("jokes")) {
+			$toAdd = "<br><br>".PHP_EOL."You should also ".\Supah_Framework\utilities\GenerationUtility::generateLink(BASE_URI . "jokes", "check this out!")." It's lulzy.";
+			$defaultContent->addEntry("jokesReferral", $toAdd);
+		}
 		$mainPage->addEntry("content", $defaultContent->renderPage());
 		$system->getTemplates()->printPage($mainPage);
 	}

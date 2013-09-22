@@ -10,14 +10,15 @@ if (!defined("SF_INIT")) {
 }
 
 class DefaultRoute implements Supah_Framework\routing\IRoute {
-	private $uri;
+	private $uri, $module;
 
-	public function __construct($uri) {
+	public function __construct($uri, $module) {
 		$this->uri = $uri;
+		$this->module = $module;
 	}
 
-	public function exec() {
-		$controller = new DefaultController($this->uri, null);
+	public function route($uri) {
+		$controller = new DefaultController($uri, null);
 		$controller->exec();
 	}
 

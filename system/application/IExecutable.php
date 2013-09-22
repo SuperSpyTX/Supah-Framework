@@ -13,8 +13,7 @@ if (!defined("SF_INIT")) {
 
 /**
  * Class IExecutable
- * Interface that identifies a class that it can be "executed"
- * to perform functions.
+ * Interface that identifies a class as an executable, which can perform different functions.
  *
  * @package Supah_Framework\application
  */

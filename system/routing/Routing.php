@@ -7,6 +7,8 @@
 
 namespace Supah_Framework;
 
+use Supah_Framework\utilities\URIUtility;
+
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
@@ -18,17 +20,17 @@ if (!defined("SF_INIT")) {
  * @package Supah_Framework
  */
 class Routing implements \Supah_Framework\application\IExecutable {
-	private $system;
-	private $routes;
+	private $system, $routes, $uri;
 
 	/**
-	 * Basic constructor.
+	 * Basic constructor which accepts a URI.
 	 *
-	 * @param $system The main framework class.
+	 * @param $system \Supah_Framework\System
 	 */
-	function __construct($system) {
+	function __construct($system, $uri) {
 		$this->system = $system;
 		$this->routes = array();
+		$this->uri = $uri;
 	}
 
 	/**
@@ -50,11 +52,9 @@ class Routing implements \Supah_Framework\application\IExecutable {
 		$this->addRoutes(array($uri => $class));
 	}
 
-	// TODO: Come up with a better name for this function and/or figure out a better way to start traveling in the framework.
 	function exec() {
-		// TODO: Split the URI query.
-		// TODO: Auto detection with /index.php/
-		$uri = str_replace(BASE_URI, '', $_SERVER['REQUEST_URI']);
+		$fullUri = URIUtility::parseURI($this->uri);
+		$uri = $fullUri[0];
 		$goto = null;
 		if ($uri != "") {
 			if (isset($uri, $this->routes[$uri])) {
@@ -67,13 +67,13 @@ class Routing implements \Supah_Framework\application\IExecutable {
 			$goto = $this->routes["default"];
 		}
 
-		if ($goto == null || $goto != $this->routes["default"] && !$goto->ruleMatches($uri) == 1) {
+		if ($goto == null || $goto != $this->routes["default"] && !$goto->ruleMatches($fullUri)) {
 			if (!isset($this->routes["error"])) {
 				die("The error template does not exist. What happened?");
 			}
 			$goto = $this->routes["error"];
 		}
 
-		$goto->exec($uri);
+		$goto->route(URIUtility::removeFirst($fullUri));
 	}
 }

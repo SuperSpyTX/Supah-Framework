@@ -1,12 +1,16 @@
 <?php
 /**
  * Class JokesModule.php
- * 
+ *
  * @author SuperSpyTX
  */
 
-class JokesModule implements \Supah_Framework\modules\IModule {
-	private $application;
+if (!defined("SF_INIT")) {
+	die("SF_INIT not detected.");
+}
+
+class JokesModule implements \Supah_Framework\application\IModule {
+	private $application, $config;
 
 	function __construct($application) {
 		$this->application = $application;
@@ -19,12 +23,23 @@ class JokesModule implements \Supah_Framework\modules\IModule {
 		$this->application->getSystem()->getRouting()->addRoutes($this->getRoutes());
 	}
 
+	public static function getName() {
+		return "jokes";
+	}
+
+	function getConfiguration() {
+		if ($config == null)
+			$this->config = $this->application->getConfiguration()->getConfig($this->getName());
+
+		return $this->config;
+	}
+
 	function isEnabled() {
 		return true;
 	}
 
 	public function getRoutes() {
 		// TODO: configurable application URIs.
-		return array('joeks' => new JokesRoute('joeks'));
+		return array('jokes' => new JokesRoute('jokes', $this));
 	}
 }

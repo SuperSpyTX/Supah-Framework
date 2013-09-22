@@ -19,7 +19,6 @@ class JokesController implements \Supah_Framework\application\IController {
 
 	function exec() {
 		global $system;
-		// default page so not to fear with arguments.
 
 		$mainPage = $system->getTemplates()->createPage("Jokes Page", "default");
 		$content = $system->getTemplates()->createPage(null, "jokes/content");
