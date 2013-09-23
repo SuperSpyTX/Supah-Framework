@@ -20,13 +20,18 @@ class GenerationUtility {
 		return "<title>" . $title . "</title>";
 	}
 
-	// TODO: Implement Key/Value pair list generation (table generation?)
-	public static function generateList($array, $break = "<br>", $isKVPair = false) {
+	// TODO: table generation?
+	public static function generateList($array, $break = "<br>", $isKVPair = false, $includeKey = false, $keySep = " - ") {
 		$list = "";
-		foreach ($array as $entry) {
-			$list .= $entry . $break;
+		if (!$isKVPair) {
+			foreach ($array as $entry) {
+				$list .= $entry . $break;
+			}
+		} else {
+			foreach ($array as $key => $value) {
+				$list .= ($includeKey ? $key.$keySep : "").$value.$break;
+			}
 		}
-
 		return $list;
 	}
 }

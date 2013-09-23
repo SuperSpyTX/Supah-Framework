@@ -39,7 +39,7 @@ class DefaultModule implements \Supah_Framework\application\IModule {
 	}
 
 	function isEnabled() {
-		return true;
+		return $this->getConfiguration()->getValueWithDef("enabled", true);
 	}
 
 	public function getRoutes() {

@@ -14,26 +14,30 @@ if (!defined("SF_INIT")) {
 }
 
 class System implements \Supah_Framework\application\IExecutable {
-	private $base_application, $config, $modules, $routing, $templates;
+	private $base_application, $config, $database, $modules, $routing, $templates;
 
-	function __construct($base_application_path, $uri, $config) {
-		if ($this->base_application == null) {
-			require($base_application_path);
-			$this->base_application = $application($this);
-			$this->config = new Configuration($config);
-			$this->modules = array();
-			$this->routing = new Routing($this, $uri);
-			$this->templates = new Templates($this);
+	function __construct($uri, $config) {
+		require(APP_DIR . "init.php");
+		$this->base_application = $application($this);
+		$this->config = new Configuration($config);
+		$this->modules = array();
+		$this->routing = new Routing($this, $uri);
+		$this->templates = new Templates($this);
 
-			foreach ($this->getApplication()->getModules() as $name => $class) {
-				if ($class->isEnabled()) {
-					$class->exec();
-					$this->modules = array_merge(array($name => $class), $this->modules);
-				}
-			}
-
-			$application = $this->base_application;
+		if ($this->config->getConfig("db")->getValueWithDef("enabled", true)) {
+			$this->database = new Database($this, $this->config->getConfig("db")->getValue("driver"));
+		} else {
+			$this->database = new Database($this, null);
 		}
+
+		foreach ($this->getApplication()->getModules() as $name => $class) {
+			if ($class->isEnabled()) {
+				$class->exec();
+				$this->modules = array_merge(array($name => $class), $this->modules);
+			}
+		}
+
+		$application = $this->base_application;
 	}
 
 	function exec() {
@@ -64,6 +68,10 @@ class System implements \Supah_Framework\application\IExecutable {
 
 	function getConfiguration() {
 		return $this->config->getConfig("sys");
+	}
+
+	function getDatabase() {
+		return $this->database;
 	}
 
 	function getRouting() {
