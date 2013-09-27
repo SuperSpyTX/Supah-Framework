@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" name="Default" comment="Begin work on route parsing.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/Database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/IDatabase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/app/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/DefaultModule.php" afterPath="$PROJECT_DIR$/app/modules/DefaultModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/utilities/GenerationUtility.php" afterPath="$PROJECT_DIR$/system/utilities/GenerationUtility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/jokes/JokesModule.php" afterPath="$PROJECT_DIR$/app/modules/jokes/JokesModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/System.php" afterPath="$PROJECT_DIR$/system/System.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.inc.php" afterPath="$PROJECT_DIR$/config.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/default_welcome_message.tmpl" afterPath="$PROJECT_DIR$/app/templates/default_welcome_message.tmpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/init.php" afterPath="$PROJECT_DIR$/app/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/init.php" afterPath="$PROJECT_DIR$/system/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" name="Default" comment="Begin work on route parsing." />
     <ignored path="supahframework.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379747395176" ignored="false" />
@@ -158,7 +144,7 @@
       <file leaf-file-name="MySQLDatabase.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="30" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.38848922">
+            <state line="65" column="0" selection-start="1656" selection-end="1656" vertical-scroll-proportion="1.3249401">
               <folding />
             </state>
           </provider>
@@ -858,7 +844,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="30" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.38848922">
+        <state line="65" column="0" selection-start="1656" selection-end="1656" vertical-scroll-proportion="1.3249401">
           <folding />
         </state>
       </provider>

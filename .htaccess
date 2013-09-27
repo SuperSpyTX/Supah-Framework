@@ -1,1 +1,5 @@
-ErrorDocument 404 /supahframework/index.php
+RewriteEngine On
+RewriteBase /supahframework/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$	index.php	[QSA,L]
