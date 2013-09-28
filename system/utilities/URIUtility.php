@@ -14,7 +14,7 @@ if (!defined("SF_INIT")) {
 class URIUtility {
 	public static function parseURI($uri) {
 		// Strip /index.php and base URIs like /website
-		$uri = str_replace(BASE_URI, '', $uri);
+		$uri = substr($uri, strlen(BASE_URI));
 		$uri = str_replace(THIS_SCRIPT, '', $uri);
 
 		// Split into array with a filter.

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" name="Default" comment="Begin work on route parsing.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Application.php" afterPath="$PROJECT_DIR$/app/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/app/controllers/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/utilities/URIUtility.php" afterPath="$PROJECT_DIR$/system/utilities/URIUtility.php" />
     </list>
     <ignored path="supahframework.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,21 +56,23 @@
     <file path="/DefaultModule.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379884751637" ignored="false" />
     <file path="/JokesModule.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379876586253" ignored="false" />
     <file path="/a.feature" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379747397177" ignored="false" />
-    <file path="/URIUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379822489752" ignored="false" />
+    <file path="/URIUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380404168764" ignored="false" />
     <file path="/Configuration.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379877192577" ignored="false" />
     <file path="/DefaultRoute.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380400989027" ignored="false" />
     <file path="/MySQLDatabase.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380396691335" ignored="false" />
     <file path="/Database.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379896177934" ignored="false" />
-    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/index.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380400453812" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/index.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380404147336" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/templates/default_welcome_message.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380400823874" ignored="false" />
-    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/controllers/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380403230706" ignored="false" />
-    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/config.inc.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380402492666" ignored="false" />
-    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/modules/DefaultModule.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380400903940" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/controllers/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380404147336" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/config.inc.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380404147336" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/modules/DefaultModule.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380404147336" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/routing/DefaultRoute.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380401117510" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/templates/testdeploy/addmore.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380401275010" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/templates/testdeploy/list.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380401465317" ignored="false" />
-    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/Application.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380403056017" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/Application.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380404147336" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/system/System.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380403056017" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/.htaccess" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380404147336" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/system/utilities/URIUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380405962991" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,15 +92,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="init.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/init.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="47" selection-start="214" selection-end="214" vertical-scroll-proportion="-6.5384617">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,10 +119,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="22" selection-start="605" selection-end="605" vertical-scroll-proportion="0.48284024">
+            <state line="31" column="26" selection-start="658" selection-end="658" vertical-scroll-proportion="-17.653847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="URIUtility.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/utilities/URIUtility.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="46" selection-start="314" selection-end="314" vertical-scroll-proportion="0.24142012">
               <folding />
             </state>
           </provider>
@@ -205,7 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/system/utilities/GenerationUtility.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/system/init.php" />
@@ -221,6 +221,7 @@
         <option value="$PROJECT_DIR$/system/application/Configuration.php" />
         <option value="$PROJECT_DIR$/app/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/Application.php" />
+        <option value="$PROJECT_DIR$/system/utilities/URIUtility.php" />
       </list>
     </option>
   </component>
@@ -684,13 +685,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/routing/RouteError.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="45" selection-start="194" selection-end="194" vertical-scroll-proportion="-3.9230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="25" selection-start="92" selection-end="92" vertical-scroll-proportion="21.576923">
@@ -791,7 +785,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="605" selection-end="605" vertical-scroll-proportion="0.48284024">
+        <state line="31" column="26" selection-start="658" selection-end="658" vertical-scroll-proportion="-17.653847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/utilities/URIUtility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="46" selection-start="314" selection-end="314" vertical-scroll-proportion="0.24142012">
           <folding />
         </state>
       </provider>
