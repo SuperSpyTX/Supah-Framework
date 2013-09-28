@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" name="Default" comment="Begin work on route parsing.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Application.php" afterPath="$PROJECT_DIR$/app/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/application/Configuration.php" afterPath="$PROJECT_DIR$/system/application/Configuration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/System.php" afterPath="$PROJECT_DIR$/system/System.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/app/controllers/DefaultController.php" />
     </list>
     <ignored path="supahframework.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,12 +64,14 @@
     <file path="/Database.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379896177934" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/index.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380400453812" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/templates/default_welcome_message.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380400823874" ignored="false" />
-    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/controllers/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380401544876" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/controllers/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380403230706" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/config.inc.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380402492666" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/modules/DefaultModule.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380400903940" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/routing/DefaultRoute.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380401117510" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/templates/testdeploy/addmore.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380401275010" ignored="false" />
     <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/templates/testdeploy/list.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380401465317" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/app/Application.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380403056017" ignored="false" />
+    <file path="$USER_HOME$/SourceTree/SF-TestDeploy/system/System.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380403056017" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +100,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="37" selection-start="604" selection-end="604" vertical-scroll-proportion="-14.384615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DefaultModule.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/DefaultModule.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -118,19 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="59" selection-start="353" selection-end="353" vertical-scroll-proportion="-7.8461537">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultRoute.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routing/DefaultRoute.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="45" selection-start="257" selection-end="257" vertical-scroll-proportion="-6.5384617">
+            <state line="28" column="22" selection-start="605" selection-end="605" vertical-scroll-proportion="0.48284024">
               <folding />
             </state>
           </provider>
@@ -172,10 +172,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Configuration.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/application/Configuration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="55" selection-start="122" selection-end="122" vertical-scroll-proportion="0.06035503">
+            <state line="24" column="0" selection-start="492" selection-end="492" vertical-scroll-proportion="-13.076923">
               <folding />
             </state>
           </provider>
@@ -205,7 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/modules/jokes/JokesModule.php" />
         <option value="$PROJECT_DIR$/system/utilities/GenerationUtility.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
@@ -217,10 +216,11 @@
         <option value="$PROJECT_DIR$/app/routing/RouteTest.php" />
         <option value="$PROJECT_DIR$/system/database/Database.php" />
         <option value="$PROJECT_DIR$/app/init.php" />
-        <option value="$PROJECT_DIR$/app/Application.php" />
         <option value="$PROJECT_DIR$/system/routing/Routing.php" />
         <option value="$PROJECT_DIR$/system/System.php" />
         <option value="$PROJECT_DIR$/system/application/Configuration.php" />
+        <option value="$PROJECT_DIR$/app/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/app/Application.php" />
       </list>
     </option>
   </component>
@@ -684,13 +684,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system/routing/IRoute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="45" selection-start="488" selection-end="488" vertical-scroll-proportion="-14.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routing/RouteError.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="45" selection-start="194" selection-end="194" vertical-scroll-proportion="-3.9230769">
@@ -740,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="59" selection-start="353" selection-end="353" vertical-scroll-proportion="-7.8461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="25" selection-start="287" selection-end="287" vertical-scroll-proportion="-7.8461537">
@@ -791,7 +777,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/system/application/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="55" selection-start="122" selection-end="122" vertical-scroll-proportion="0.06035503">
+        <state line="24" column="0" selection-start="492" selection-end="492" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="37" selection-start="604" selection-end="604" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="22" selection-start="605" selection-end="605" vertical-scroll-proportion="0.48284024">
           <folding />
         </state>
       </provider>

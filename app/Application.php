@@ -26,7 +26,7 @@ class DemoApplication implements Supah_Framework\application\IApplication {
 	}
 
 	public function isModuleLoaded($name) {
-		return getModule($name) != null;
+		return $this->getModule($name) != null;
 	}
 
 	public function getModule($name) {

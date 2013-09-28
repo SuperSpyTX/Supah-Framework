@@ -24,7 +24,7 @@ class DefaultController implements Supah_Framework\application\IController {
 		$mainPage = $system->getTemplates()->createPage("Default Page", "default");
 		$defaultContent = $system->getTemplates()->createPage(null, "default_welcome_message");
 
-		if ($system->isModuleLoaded("jokes")) {
+		if ($system->getApplication->isModuleLoaded("jokes")) {
 			$toAdd = "<br><br>".PHP_EOL."You should also ".\Supah_Framework\utilities\GenerationUtility::generateLink(BASE_URI . "jokes", "check this out!")." It's lulzy.";
 			$defaultContent->addEntry("jokesReferral", $toAdd);
 		}
