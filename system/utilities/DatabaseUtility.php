@@ -12,13 +12,13 @@ if (!defined("SF_INIT")) {
 }
 
 class DatabaseUtility {
-	public static function buildList($list, $cmd = "") {
+	public static function buildList($list, $cmd = "", $sep = "=") {
 		$data = array();
 		$stmt = "";
 		if (is_array($list) && count($list) > 0) {
 			$stmt .= (strlen($cmd) > 0 ? " " . $cmd . " " : "");
 			foreach ($list as $key => $value) {
-				$stmt .= "" . $key . " = ?,";
+				$stmt .= "" . $key . " ".$sep." ?,";
 				array_push($data, $value);
 			}
 

@@ -35,14 +35,14 @@ class MySQLDatabase implements IDatabase {
 	function insert($table, $entries) {
 		$processed = DatabaseUtility::buildArray($entries, "VALUES");
 		$data = $processed['data'];
-		$stmt = "INSERT INTO ".$table." ".$processed['append_stmt'];
+		$stmt = "INSERT INTO " . $table . " " . $processed['append_stmt'];
 
 		return $this->query($stmt, $data);
 	}
 
-	function select($what, $table, $filter = array()) {
+	function select($what, $table, $filter = array(), $matchSector = "=") {
 		$data = array();
-		$where = DatabaseUtility::buildList($filter, "WHERE");
+		$where = DatabaseUtility::buildList($filter, "WHERE", $matchSector);
 		$data = DatabaseUtility::addToArray($data, $where['data']);
 		$where = $where['append_stmt'];
 
@@ -51,7 +51,7 @@ class MySQLDatabase implements IDatabase {
 		return $this->query($stmt, $data);
 	}
 
-	function update($table, $toSet, $filter) {
+	function update($table, $toSet, $filter, $matchSector = "=") {
 		if (!is_array($toSet) || count($toSet) < 1) {
 			return false;
 		}
@@ -62,18 +62,18 @@ class MySQLDatabase implements IDatabase {
 		$data = DatabaseUtility::addToArray($data, $set['data']);
 		$set = $set['append_stmt'];
 
-		$where = DatabaseUtility::buildList($filter, "WHERE");
+		$where = DatabaseUtility::buildList($filter, "WHERE", $matchSector);
 		$data = DatabaseUtility::addToArray($data, $where['data']);
 		$where = $where['append_stmt'];
 
-		$stmt = "UPDATE " . $table . "" . $this->buildList($toSet, "SET") . $this->buildList($filter, "WHERE");
+		$stmt = "UPDATE " . $table . "" . $set . "" . $where);
 
 		return $this->query($stmt, $data);
 	}
 
-	function delete($table, $filter) {
+	function delete($table, $filter, $matchSector = "=") {
 		$data = array();
-		$where = DatabaseUtility::buildList($filter, "WHERE");
+		$where = DatabaseUtility::buildList($filter, "WHERE", $matchSector);
 		$data = DatabaseUtility::addToArray($data, $set['data']);
 		$where = $where['append_stmt'];
 

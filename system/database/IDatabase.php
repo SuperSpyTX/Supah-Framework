@@ -16,9 +16,9 @@ interface IDatabase {
 
 	function insert($table, $entries);
 
-	function select($what, $table, $filter = array());
+	function select($what, $table, $filter = array(), $matchSector = "=");
 
-	function update($table, $toSet, $filter);
+	function update($table, $toSet, $filter, $matchSector = "=");
 
-	function delete($table, $filter);
+	function delete($table, $filter, $matchSector = "=");
 }
