@@ -5,7 +5,8 @@
  * @author SuperSpyTX
  */
 
-namespace Supah_Framework\application;
+// TODO: append "\application" at the end of namespace?
+namespace Supah_Framework;
 
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");

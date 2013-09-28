@@ -20,6 +20,7 @@ class System implements \Supah_Framework\application\IExecutable {
 		$this->config = new Configuration($config);
 		$this->routing = new Routing($this, $uri);
 		$this->templates = new Templates($this);
+		$this->modules = array();
 
 		$application = $this->base_application;
 	}

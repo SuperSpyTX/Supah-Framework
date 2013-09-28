@@ -14,8 +14,7 @@ class DemoApplication implements Supah_Framework\application\IApplication {
 
 	function __construct($system) {
 		$this->system = $system;
-		$this->config = $this->system->getConfiguration()->getConfig("app");
-		$this->modules = array('default' => new DefaultRoute($this));
+		$this->modules = array('default' => new DefaultModule($this));
 	}
 
 	public function getSystem() {
@@ -35,6 +34,9 @@ class DemoApplication implements Supah_Framework\application\IApplication {
 	}
 
 	public function getConfiguration() {
+		if ($this->config == null) {
+			$this->config = $this->getSystem()->getConfiguration()->getConfig("app");
+		}
 		return $this->config;
 	}
 
