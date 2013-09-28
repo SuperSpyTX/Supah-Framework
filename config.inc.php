@@ -15,14 +15,12 @@ if (!defined("SF_INIT")) {
  * The base URI of this install.  You can leave this blank if this is running from the root directory.
  * This is used in the routing class.
  *
- * TODO: Make this process automatic.
- *
  */
-define("BASE_URI", "/supahframework/");
+// TODO: Make this process automatic.
+define("BASE_URI", "/");
 
 /**
  * The application directory to load. This is where all the application files lie.
- *
  */
 define("APP_DIR", "app/");
 
@@ -34,13 +32,13 @@ define("SYSTEM_DIR", "system/");
 // Now the main configuration!
 
 // Database Configuration.
-$CFG['db']['enabled'] = true;
+$CFG['db']['enabled'] = false;
 $CFG['db']['driver'] = "MySQL"; // NOTE: case-sensitive!
 $CFG['db']['host'] = "127.0.0.1";
-$CFG['db']['port'] = "1090";
-$CFG['db']['database'] = "sf_demo";
-$CFG['db']['username'] = "mypix_login"; // In dedication of the infamous MyPictures folder with nudes of him and other gay men.
-$CFG['db']['password'] = "py3FFZdRmyqyDmfm";
+$CFG['db']['port'] = "3306";
+$CFG['db']['database'] = "";
+$CFG['db']['username'] = "";
+$CFG['db']['password'] = "";
 
 // Application configuration.
 $CFG['app']['name'] = "demo";

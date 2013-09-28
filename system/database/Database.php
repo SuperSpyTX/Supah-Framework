@@ -19,7 +19,7 @@ class Database {
 		if ($dbDriverName == null) {
 			// empty db class with isEnabled() false.
 		} else {
-			include(SYSTEM_DIR . "database\\drivers\\" . $dbDriverName . "Database.php");
+			include(SYSTEM_DIR . "database/drivers/" . $dbDriverName . "Database.php");
 			$this->dbDriver = $database($this);
 		}
 	}

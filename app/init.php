@@ -12,7 +12,7 @@ if (!defined("SF_INIT")) {
 // Include all the things!
 
 // Default module.
-include(APP_DIR . "modules\DefaultModule.php");
+include(APP_DIR . "modules/DefaultModule.php");
 
 // Main class.
 include(APP_DIR . "Application.php");
