@@ -7,8 +7,6 @@
 
 namespace Supah_Framework;
 
-use Supah_Framework\application\Configuration;
-
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
@@ -20,10 +18,13 @@ class System implements \Supah_Framework\application\IExecutable {
 		require(APP_DIR . "init.php");
 		$this->base_application = $application($this);
 		$this->config = new Configuration($config);
-		$this->modules = array();
 		$this->routing = new Routing($this, $uri);
 		$this->templates = new Templates($this);
 
+		$application = $this->base_application;
+	}
+
+	function exec() {
 		if ($this->config->getConfig("db")->getValueWithDef("enabled", true)) {
 			$this->database = new Database($this, $this->config->getConfig("db")->getValue("driver"));
 		} else {
@@ -37,10 +38,6 @@ class System implements \Supah_Framework\application\IExecutable {
 			}
 		}
 
-		$application = $this->base_application;
-	}
-
-	function exec() {
 		$this->getRouting()->exec();
 	}
 
@@ -48,26 +45,8 @@ class System implements \Supah_Framework\application\IExecutable {
 		return $this->base_application;
 	}
 
-	function isModuleLoaded($name) {
-		return isset($this->modules[$name]);
-	}
-
-	/**
-	 * Gets a specific module specified by name.
-	 *
-	 * @param $name string
-	 * @return \Supah_Framework\application\IModule
-	 */
-	function getModule($name) {
-		return $this->modules[$name];
-	}
-
-	function getMainConfiguration() {
-		return $this->config;
-	}
-
 	function getConfiguration() {
-		return $this->config->getConfig("sys");
+		return $this->config;
 	}
 
 	function getDatabase() {

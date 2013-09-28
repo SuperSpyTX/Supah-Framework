@@ -11,9 +11,8 @@ if (!defined("SF_INIT")) {
 
 // Include all the things!
 
-// Modules
-include(APP_DIR . "modules/DefaultModule.php");
-include(APP_DIR . "modules/jokes/JokesModule.php");
+// Default module.
+include(APP_DIR . "modules\DefaultModule.php");
 
 // Main class.
 include(APP_DIR . "Application.php");

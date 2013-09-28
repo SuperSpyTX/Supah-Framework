@@ -33,7 +33,7 @@ class Database {
 	}
 
 	function getConfiguration() {
-		return $this->system->getMainConfiguration()->getConfig("db");
+		return $this->system->getConfiguration()->getConfig("db");
 	}
 
 	function insert($table, $entries) {

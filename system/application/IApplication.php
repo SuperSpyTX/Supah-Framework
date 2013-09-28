@@ -33,6 +33,31 @@ interface IApplication {
 	function getSystem();
 
 	/**
+	 * Adds a module.
+	 *
+	 * @param $name string
+	 * @param $class \Supah_Framework\application\IModule
+	 * @return void|bool
+	 */
+	function addModule($name, $class);
+
+	/**
+	 * Checks if a module specified by name is loaded.
+	 *
+	 * @param $name string
+	 * @return bool
+	 */
+	function isModuleLoaded($name);
+
+	/**
+	 * Gets a specific module specified by name.
+	 *
+	 * @param $name string
+	 * @return \Supah_Framework\application\IModule
+	 */
+	function getModule($name);
+
+	/**
 	 * Gets the configuration class.
 	 *
 	 * @return \Supah_Framework\application\Configuration
@@ -47,7 +72,7 @@ interface IApplication {
 	public function getName();
 
 	/**
-	 * Gets the properly-formatted name of the application.
+	 * Gets the properly formatted name of the application.
 	 *
 	 * @return string
 	 */

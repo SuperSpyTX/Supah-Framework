@@ -10,20 +10,31 @@ if (!defined("SF_INIT")) {
 }
 
 class DemoApplication implements Supah_Framework\application\IApplication {
-	private $system, $config;
+	private $system, $modules, $config;
 
 	function __construct($system) {
 		$this->system = $system;
+		$this->config = $this->system->getConfiguration()->getConfig("app");
+		$this->modules = array('default' => new DefaultRoute($this));
 	}
 
 	public function getSystem() {
 		return $this->system;
 	}
 
-	public function getConfiguration() {
-		if ($this->config == null)
-			$this->config = $this->system->getMainConfiguration()->getConfig("app");
+	public function addModule($name, $class) {
+		$this->modules = array_merge(array($name => $class), $this->modules);
+	}
 
+	public function isModuleLoaded($name) {
+		return getModule($name) != null;
+	}
+
+	public function getModule($name) {
+		return $this->modules[$name];
+	}
+
+	public function getConfiguration() {
 		return $this->config;
 	}
 
@@ -36,6 +47,6 @@ class DemoApplication implements Supah_Framework\application\IApplication {
 	}
 
 	public function getModules() {
-		return array(DefaultModule::getName() => new DefaultModule($this), JokesModule::getName() => new JokesModule($this));
+		return $this->modules;
 	}
 }
