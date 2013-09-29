@@ -40,15 +40,15 @@ class Database {
 		return $this->dbDriver->insert($table, $entries);
 	}
 
-	function select($what, $table, $filter = array(), $matchSector = "=") {
-		return $this->dbDriver->select($what, $table, $filter, $partialMatch);
+	function select($what, $table, $filter = null) {
+		return $this->dbDriver->select($what, $table, $filter);
 	}
 
-	function update($table, $toSet, $filter, $matchSector = "=") {
-		return $this->dbDriver->update($table, $toSet, $filter, $partialMatch);
+	function update($table, $toSet, $filter) {
+		return $this->dbDriver->update($table, $toSet, $filter);
 	}
 
-	function delete($table, $filter, $matchSector = "=") {
-		return $this->dbDriver->delete($table, $filter, $partialMatch);
+	function delete($table, $filter) {
+		return $this->dbDriver->delete($table, $filter);
 	}
 }

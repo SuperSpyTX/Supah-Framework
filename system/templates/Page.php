@@ -16,7 +16,7 @@ class Page {
 	private $template_name;
 	private $template_path;
 
-	function __construct($page_title, $template_name) {
+	function __construct($template_name, $page_title) {
 		$this->template_name = $template_name;
 		$this->template_path = APP_DIR . "templates/" . $template_name . ".tmpl";
 

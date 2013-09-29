@@ -16,9 +16,9 @@ class ErrorController implements \Supah_Framework\application\IController {
 	function exec() {
 		global $system;
 
-		$mainPage = $system->getTemplates()->createPage("Error Page - " . $this->args['error'], "default");
 		$errorCode = substr($this->args['error'], 0, 3);
-		$errorPage = $system->getTemplates()->createPage(null, "errors/" . $errorCode);
+		$mainPage = $system->getTemplates()->load("default", "Error Page - " . $errorCode);
+		$errorPage = $system->getTemplates()->load("errors/" . $errorCode);
 		$mainPage->addEntry("content", $errorPage->renderPage());
 		$system->getTemplates()->printPage($mainPage);
 	}

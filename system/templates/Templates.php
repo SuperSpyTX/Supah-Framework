@@ -7,6 +7,8 @@
 
 namespace Supah_Framework;
 
+use Supah_Framework\templates\Page;
+
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
@@ -18,8 +20,8 @@ class Templates {
 		$this->system = $system;
 	}
 
-	function createPage($page_name, $template_name) {
-		return new \Supah_Framework\templates\Page($page_name, $template_name);
+	function load($template_name, $page_name = null) {
+		return new Page($template_name, $page_name);
 	}
 
 	function printPage($page) {
@@ -29,7 +31,7 @@ class Templates {
 	function renderPage($page) {
 		//the magic of evolution :)
 
-		if (!file_exists($page->getTemplatePath())) {
+		if (!$page instanceof Page || !file_exists($page->getTemplatePath())) {
 			//don't evaluate not existent templates.
 			return false;
 		}

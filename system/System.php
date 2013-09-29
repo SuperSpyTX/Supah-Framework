@@ -12,13 +12,14 @@ if (!defined("SF_INIT")) {
 }
 
 class System implements \Supah_Framework\application\IExecutable {
-	private $base_application, $config, $database, $modules, $routing, $templates;
+	private $base_application, $config, $database, $modules, $routing, $scripts, $templates;
 
 	function __construct($uri, $config) {
 		require(APP_DIR . "init.php");
 		$this->base_application = $application($this);
 		$this->config = new Configuration($config);
 		$this->routing = new Routing($this, $uri);
+		$this->scripts = new Scripts($this);
 		$this->templates = new Templates($this);
 		$this->modules = array();
 
@@ -58,7 +59,15 @@ class System implements \Supah_Framework\application\IExecutable {
 		return $this->routing;
 	}
 
+	function getScripts() {
+		return $this->scripts;
+	}
+
 	function getTemplates() {
 		return $this->templates;
+	}
+
+	function getVersion() {
+		return "1.0 Development";
 	}
 }

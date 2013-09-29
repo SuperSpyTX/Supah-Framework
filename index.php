@@ -9,7 +9,6 @@ include("config.inc.php");
 // Include the initializer, which initalizes the Supah Framework environment.
 include(SYSTEM_DIR . "init.php");
 
-
 // Now run the framework.
 $system->exec();
 ?>

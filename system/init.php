@@ -11,6 +11,7 @@ if (!defined("SF_INIT")) {
 
 // TODO: create an dynamic autoloader.
 
+
 // Include all the things!
 
 // Application
@@ -21,12 +22,17 @@ include(SYSTEM_DIR . "application/IController.php");
 include(SYSTEM_DIR . "application/IModule.php");
 
 // Database
+include(SYSTEM_DIR . "database/Filter.php");
 include(SYSTEM_DIR . "database/IDatabase.php");
 include(SYSTEM_DIR . "database/Database.php");
 
 // Routing
 include(SYSTEM_DIR . "routing/IRoute.php");
 include(SYSTEM_DIR . "routing/Routing.php");
+
+// Scripts
+include(SYSTEM_DIR . "scripts/Script.php");
+include(SYSTEM_DIR . "scripts/Scripts.php");
 
 // Templates
 include(SYSTEM_DIR . "templates/Page.php");
@@ -39,6 +45,7 @@ include(SYSTEM_DIR . "utilities/URIUtility.php");
 
 // Main class.
 include(SYSTEM_DIR . "System.php");
+
 
 // Initialize all the things!
 $system = new Supah_Framework\System($_SERVER['REQUEST_URI'], $CFG);
