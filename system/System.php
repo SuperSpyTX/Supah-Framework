@@ -27,6 +27,10 @@ class System implements \Supah_Framework\application\IExecutable {
 	}
 
 	function exec() {
+		if (!$this->config->getConfig("app")->getValueWithDef("enabled", true)) {
+			die("This application is currently disabled in the configuration.  If you are the website owner, please set ['app']['enabled'] to true.");
+		}
+
 		if ($this->config->getConfig("db")->getValueWithDef("enabled", true)) {
 			$this->database = new Database($this, $this->config->getConfig("db")->getValue("driver"));
 		} else {

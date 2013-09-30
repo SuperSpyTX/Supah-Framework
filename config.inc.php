@@ -40,8 +40,11 @@ $CFG['db']['username'] = "";
 $CFG['db']['password'] = "";
 
 // Application configuration.
+$CFG['app']['enabled'] = true;
 $CFG['app']['name'] = "demo";
 $CFG['app']['title'] = "Demo Application";
+$CFG['app']['default.route'] = "default";
+$CFG['app']['error.route'] = "error";
 
 // Jokes module.
 $CFG['app']['jokes']['enabled'] = true;

@@ -38,6 +38,6 @@ class URIUtility {
 	public static function removeFirst($uri) {
 		$uriArr = $uri;
 		unset($uriArr[0]);
-		return $uriArr;
+		return URIUtility::resortArray($uriArr); // TODO: Decide if we need resortArray with removeFirst()
 	}
 }

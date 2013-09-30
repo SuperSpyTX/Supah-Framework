@@ -61,17 +61,17 @@ class Routing implements \Supah_Framework\application\IExecutable {
 				$goto = $this->routes[$uri];
 			}
 		} else {
-			if (!isset($this->routes["default"])) {
+			if (!isset($this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("default.route", "default")])) {
 				die("The default template does not exist. What happened?");
 			}
-			$goto = $this->routes["default"];
+			$goto = $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("default.route", "default")];
 		}
 
-		if ($goto == null || $goto != $this->routes["default"] && !$goto->ruleMatches($fullUri)) {
-			if (!isset($this->routes["error"])) {
+		if ($goto == null || $goto != $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("default.route", "default")] && !$goto->ruleMatches($fullUri)) {
+			if (!isset($this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("error.route", "error")])) {
 				die("The error template does not exist. What happened?");
 			}
-			$goto = $this->routes["error"];
+			$goto = $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("error.route", "error")];
 		}
 
 		$goto->route(URIUtility::removeFirst($fullUri));
