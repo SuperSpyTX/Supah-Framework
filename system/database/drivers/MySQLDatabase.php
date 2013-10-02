@@ -106,7 +106,7 @@ class MySQLDatabase implements IDatabase {
 		$data = DatabaseUtility::addToArray($data, $where['data']);
 		$where = $where['append_stmt'];
 
-		$stmt = "UPDATE " . $table . "" . $set . "" . $where);
+		$stmt = "UPDATE " . $table . "" . $set . "" . $where;
 
 		return $this->query($stmt, $data);
 	}
