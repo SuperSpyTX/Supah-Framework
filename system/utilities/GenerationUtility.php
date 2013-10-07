@@ -13,7 +13,7 @@ if (!defined("SF_INIT")) {
 
 class GenerationUtility {
 	public static function generateLink($script, $comment) {
-		return "<a href=\"" . $script . "\">" . $comment . "</a>";
+		return "<a href=\"" . (StringUtility::startsWith($script, "htt") ? $script : substr(BASE_URI, 0, strlen(BASE_URI) - 1)) . "/" . $script . "\">" . $comment . "</a>";
 	}
 
 	public static function generateTitle($title) {
@@ -29,9 +29,14 @@ class GenerationUtility {
 			}
 		} else {
 			foreach ($array as $key => $value) {
-				$list .= ($includeKey ? $key.$keySep : "").$value.$break;
+				$list .= ($includeKey ? $key . $keySep : "") . $value . $break;
 			}
 		}
+
 		return $list;
+	}
+
+	public static function wrapHtmlTags($tag, $value) {
+		return ("<".str_replace("<", "", str_replace(">", "", $tag)).">".$value."</".str_replace("<", "", str_replace(">", "", $tag)).">");
 	}
 }

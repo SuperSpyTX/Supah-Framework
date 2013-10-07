@@ -36,7 +36,7 @@ class Templates {
 			return false;
 		}
 
-		$renderedPage = @file_get_contents($page->getTemplatePath());
+		$renderedPage = str_replace("\'", "'", addslashes(@file_get_contents($page->getTemplatePath())));
 
 		extract($page->getPageVariables());
 

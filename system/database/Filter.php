@@ -12,11 +12,12 @@ if (!defined("SF_INIT")) {
 }
 
 class Filter {
-	private $filter, $matchType;
+	private $filter, $matchType, $additionalQueryData;
 
-	function __construct($filter = array(), $matchType = FILTER_EQUALS)  {
+	function __construct($filter = array(), $matchType = FILTER_EQUALS, $additionalQueryData = "")  {
 		$this->filter = $filter;
 		$this->matchType = $matchType;
+		$this->additionalQueryData = $additionalQueryData;
 	}
 
 	function getFilter() {
@@ -25,5 +26,10 @@ class Filter {
 
 	function getType() {
 		return $this->matchType;
+	}
+
+	// NOTE: This is implementation specific - nothing can be avoided to fix this.
+	function getAdditionalQueryData() {
+		return $this->additionalQueryData;
 	}
 }

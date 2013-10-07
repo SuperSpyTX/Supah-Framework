@@ -1,7 +1,7 @@
 <?php
 /**
  * Class URIUtility.php
- * 
+ *
  * @author SuperSpyTX
  */
 
@@ -22,12 +22,16 @@ class URIUtility {
 
 		// Sort it (so any fucked up queries are stripped).
 		$uriArr = URIUtility::resortArray($uriArr);
+
 		return $uriArr;
 	}
 
 	// Because of the fact every other PHP function doesn't do this correctly, I have to do it this way.
 	public static function resortArray($arr) {
 		$i = 0;
+		if (count($arr) < 1)
+			return $arr;
+
 		foreach ($arr as $key => $value) {
 			$nArr[$i++] = $value;
 		}
@@ -38,6 +42,7 @@ class URIUtility {
 	public static function removeFirst($uri) {
 		$uriArr = $uri;
 		unset($uriArr[0]);
+
 		return URIUtility::resortArray($uriArr); // TODO: Decide if we need resortArray with removeFirst()
 	}
 }

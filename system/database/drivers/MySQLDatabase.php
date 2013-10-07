@@ -12,6 +12,7 @@ use Supah_Framework\utilities\DatabaseUtility;
 define("FILTER_EQUALS", "=");
 define("FILTER_PARTIAL", "LIKE");
 define("FILTER_PARTIAL_OPPOSITE", "NOT LIKE");
+define("FILTER_LIMIT", "LIMIT ");
 
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
@@ -47,7 +48,7 @@ class MySQLDatabase implements IDatabase {
 		$data = array();
 		$ps1 = "(";
 		$ps2 = " " . $cmd . " (";
-		if (is_array($list) && count($list) > 0) {
+		if (is_array($array) && count($array) > 0) {
 			foreach ($array as $key => $value) {
 				$ps1 .= "`" . $key . "`,";
 				$ps2 .= "?,";
@@ -68,7 +69,18 @@ class MySQLDatabase implements IDatabase {
 		if (!$pstmt->execute($data)) {
 			return false;
 		} else {
-			return $pstmt->fetchAll();
+			if ($pstmt->rowCount() > 0) {
+				$obj = $pstmt->fetchAll();
+				if (!$obj) {
+					return true;
+				}
+				if ($pstmt->rowCount() == 1) {
+					$obj = $obj[0];
+				}
+				return $obj;
+			} else {
+				return true;
+			}
 		}
 	}
 
@@ -82,9 +94,11 @@ class MySQLDatabase implements IDatabase {
 
 	function select($what, $table, $filter = null) {
 		$data = array();
-		$where = ($filter != null ? $this->buildList($filter->getFilter(), "WHERE", $filter->getType()) : "");
-		$data = DatabaseUtility::addToArray($data, $where['data']);
-		$where = $where['append_stmt'];
+		if ($filter instanceof Filter) {
+			$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType());
+			$data = DatabaseUtility::addToArray($data, $where['data']);
+		}
+		$where = $where['append_stmt'] . " " . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
 
 		$stmt = "SELECT " . $what . " FROM " . $table . "" . $where;
 
@@ -104,7 +118,7 @@ class MySQLDatabase implements IDatabase {
 
 		$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType());
 		$data = DatabaseUtility::addToArray($data, $where['data']);
-		$where = $where['append_stmt'];
+		$where = $where['append_stmt'] . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
 
 		$stmt = "UPDATE " . $table . "" . $set . "" . $where;
 
@@ -118,8 +132,8 @@ class MySQLDatabase implements IDatabase {
 
 		$data = array();
 		$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType());
-		$data = DatabaseUtility::addToArray($data, $set['data']);
-		$where = $where['append_stmt'];
+		$data = DatabaseUtility::addToArray($data, $where['data']);
+		$where = " ".$where['append_stmt'] . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
 
 		$stmt = "DELETE FROM " . $table . "" . $where;
 

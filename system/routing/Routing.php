@@ -72,8 +72,9 @@ class Routing implements \Supah_Framework\application\IExecutable {
 				die("The error template does not exist. What happened?");
 			}
 			$goto = $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("error.route", "error")];
+			$goto->route($fullUri);
+		} else {
+			$goto->route(URIUtility::removeFirst($fullUri));
 		}
-
-		$goto->route(URIUtility::removeFirst($fullUri));
 	}
 }

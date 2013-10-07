@@ -39,6 +39,7 @@ include(SYSTEM_DIR . "templates/Page.php");
 include(SYSTEM_DIR . "templates/Templates.php");
 
 // Utilities.
+include(SYSTEM_DIR . "utilities/DatabaseUtility.php");
 include(SYSTEM_DIR . "utilities/GenerationUtility.php");
 include(SYSTEM_DIR . "utilities/StringUtility.php");
 include(SYSTEM_DIR . "utilities/URIUtility.php");
