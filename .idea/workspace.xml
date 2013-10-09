@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" name="Default" comment="Begin work on route parsing.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/Filter.php" afterPath="$PROJECT_DIR$/system/database/Filter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/utilities/GenerationUtility.php" afterPath="$PROJECT_DIR$/system/utilities/GenerationUtility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php" afterPath="$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/routing/Routing.php" afterPath="$PROJECT_DIR$/system/routing/Routing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/utilities/StringUtility.php" afterPath="$PROJECT_DIR$/system/utilities/StringUtility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/templates/Templates.php" afterPath="$PROJECT_DIR$/system/templates/Templates.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/utilities/URIUtility.php" afterPath="$PROJECT_DIR$/system/utilities/URIUtility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/init.php" afterPath="$PROJECT_DIR$/system/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.inc.php" afterPath="$PROJECT_DIR$/config.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/default_welcome_message.tmpl" afterPath="$PROJECT_DIR$/app/templates/default_welcome_message.tmpl" />
     </list>
     <ignored path="supahframework.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379747395176" ignored="false" />
-    <file path="/a.dummy" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380684703217" ignored="false" />
+    <file path="/a.dummy" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381273692950" ignored="false" />
     <file path="/templates.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379564901307" ignored="false" />
     <file path="/system.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379564427132" ignored="false" />
     <file path="/configuration.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379564442160" ignored="false" />
@@ -34,11 +27,11 @@
     <file path="/ClassUtilities.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379639547267" ignored="false" />
     <file path="/init.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379875429340" ignored="false" />
     <file path="/config.inc.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380498508797" ignored="false" />
-    <file path="/Templates.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380481925053" ignored="false" />
+    <file path="/Templates.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381267545893" ignored="false" />
     <file path="/IApplication.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380394582981" ignored="false" />
     <file path="/IRoute.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379878103025" ignored="false" />
     <file path="/Utilities.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379645979974" ignored="false" />
-    <file path="/Page.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709231890" ignored="false" />
+    <file path="/Page.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381262585986" ignored="false" />
     <file path="/default.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379707312680" ignored="false" />
     <file path="/TemplatesUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379708721937" ignored="false" />
     <file path="/IController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379720538054" ignored="false" />
@@ -51,7 +44,7 @@
     <file path="/JokesController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379709608084" ignored="false" />
     <file path="/Jokes.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379710259709" ignored="false" />
     <file path="/content.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379710111473" ignored="false" />
-    <file path="/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380497034436" ignored="false" />
+    <file path="/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381262794996" ignored="false" />
     <file path="/default_welcome_message.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379735664555" ignored="false" />
     <file path="/Route404.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379711848994" ignored="false" />
     <file path="/ErrorController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1379712042260" ignored="false" />
@@ -100,6 +93,31 @@
     <file path="$USER_HOME$/SourceTree/paste.jkrau.se/app/routing/RouteError.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380683282973" ignored="false" />
     <file path="$USER_HOME$/SourceTree/paste.jkrau.se/app/routing/RouteTruth.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380684705850" ignored="false" />
     <file path="$USER_HOME$/SourceTree/paste.jkrau.se/app/controllers/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1380684790423" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/templates/paste/create.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381272293272" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/controllers/DefaultController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381267642675" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/controllers/paste/CreateController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381276930149" ignored="false" />
+    <file path="/CreateController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381267308396" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/modules/DefaultModule.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381193184519" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/controllers/paste/ViewController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381289688653" ignored="false" />
+    <file path="/ViewController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381275660139" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/scripts/paste/recent.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381273649974" ignored="false" />
+    <file path="/recent.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381196817616" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/templates/paste/view.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381277203933" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/templates/paste/about.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381267624018" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/system/templates/Templates.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381267564531" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/system/templates/Page.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381262637616" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/scripts/default.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381262637616" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/scripts/paste/create_alert.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381273661502" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/controllers/ErrorController.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381267577834" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/system/scripts/Scripts.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381262907707" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/assets/custom.css" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381266374277" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/templates/paste/base/centering.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381267077946" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/templates/paste/base/center_style.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381267152902" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/system/utilities/StringUtility.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381268663435" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/templates/paste/subs/protected.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381273416882" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/templates/paste/subs/nuke.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381273563935" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/config.inc.php" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381274298259" ignored="false" />
+    <file path="$PROJECT_DIR$/../jkpaste/app/templates/paste/subs/protected_bypass.tmpl" changelist="bc5f754b-2652-44d3-a715-c0b0c9ebc2c8" time="1381276012837" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,16 +140,25 @@
       <file leaf-file-name="config.inc.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+            <state line="18" column="36" selection-start="423" selection-end="423" vertical-scroll-proportion="-7.1538463">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MySQLDatabase.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MySQLDatabase.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="35" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.94138753">
+            <state line="116" column="35" selection-start="3266" selection-end="3266" vertical-scroll-proportion="-30.26923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default_welcome_message.tmpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/default_welcome_message.tmpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="58" selection-start="700" selection-end="700" vertical-scroll-proportion="0.19428572">
               <folding />
             </state>
           </provider>
@@ -177,15 +204,6 @@
         <entry file="file://$PROJECT_DIR$/system/utilities/URIUtility.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="38" column="19" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultModule.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/DefaultModule.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="41" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -240,15 +258,15 @@
         <option value="$PROJECT_DIR$/system/scripts/Scripts.php" />
         <option value="$PROJECT_DIR$/app/scripts/default.php" />
         <option value="$PROJECT_DIR$/app/scripts/test.php" />
-        <option value="$PROJECT_DIR$/app/templates/default_welcome_message.tmpl" />
         <option value="$PROJECT_DIR$/app/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/system/init.php" />
         <option value="$PROJECT_DIR$/system/scripts/Script.php" />
         <option value="$PROJECT_DIR$/system/routing/Routing.php" />
         <option value="$PROJECT_DIR$/system/utilities/URIUtility.php" />
         <option value="$PROJECT_DIR$/system/System.php" />
-        <option value="$PROJECT_DIR$/config.inc.php" />
         <option value="$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php" />
+        <option value="$PROJECT_DIR$/config.inc.php" />
+        <option value="$PROJECT_DIR$/app/templates/default_welcome_message.tmpl" />
       </list>
     </option>
   </component>
@@ -686,7 +704,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -771,11 +789,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/init.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="37" selection-start="562" selection-end="562" vertical-scroll-proportion="-12.230769" />
@@ -857,16 +870,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.inc.php">
+    <entry file="file://$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+        <state line="116" column="35" selection-start="3266" selection-end="3266" vertical-scroll-proportion="-30.26923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/database/drivers/MySQLDatabase.php">
+    <entry file="file://$PROJECT_DIR$/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="35" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.94138753">
+        <state line="18" column="36" selection-start="423" selection-end="423" vertical-scroll-proportion="-7.1538463">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/default_welcome_message.tmpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="58" selection-start="700" selection-end="700" vertical-scroll-proportion="0.19428572">
           <folding />
         </state>
       </provider>

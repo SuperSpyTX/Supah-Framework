@@ -25,14 +25,14 @@ class Templates {
 	}
 
 	function printPage($page) {
-		echo($this->renderPage($page));
+		echo($this->exec($page));
 	}
 
-	function renderPage($page) {
+	function exec($page) {
 		//the magic of evolution :)
 
 		if (!$page instanceof Page || !file_exists($page->getTemplatePath())) {
-			//don't evaluate not existent templates.
+			//don't evaluate non-existent templates.
 			return false;
 		}
 

@@ -16,7 +16,7 @@ if (!defined("SF_INIT")) {
  * This is used in the routing class.
  */
 // TODO: Make this process automatic.
-define("BASE_URI", "/");
+define("BASE_URI", "/supahframework/");
 
 /**
  * The application directory to load. This is where all the application files lie.

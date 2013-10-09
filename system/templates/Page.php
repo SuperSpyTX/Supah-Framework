@@ -11,7 +11,7 @@ if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
-class Page {
+class Page implements \Supah_Framework\application\IExecutable {
 	private $pagevars;
 	private $template_name;
 	private $template_path;
@@ -51,9 +51,9 @@ class Page {
 		return $this->pagevars;
 	}
 
-	function renderPage() {
+	function exec() {
 		global $system;
 
-		return $system->getTemplates()->renderPage($this);
+		return $system->getTemplates()->exec($this);
 	}
 }
