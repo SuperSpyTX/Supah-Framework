@@ -27,18 +27,18 @@ class MySQLDatabase implements IDatabase {
 		$this->mysqlObject = new \PDO($pdo, $database->getConfiguration()->getValue("username"), $database->getConfiguration()->getValue("password"));
 	}
 
-	private function buildList($list, $cmd = "", $sep = "") {
+	private function buildList($list, $cmd = "", $sep = "", $postSep = ",") {
 		$data = array();
 		$stmt = "";
 		if (is_array($list) && count($list) > 0) {
 			$stmt .= (strlen($cmd) > 0 ? " " . $cmd . " " : "");
 			foreach ($list as $key => $value) {
-				$stmt .= "" . $key . " " . $sep . " ?,";
+				$stmt .= "" . $key . " " . $sep . " ?" . $postSep;
 				array_push($data, $value);
 			}
 
 			// Strip the last comma.
-			$stmt = substr($stmt, 0, strlen($stmt) - 1);
+			$stmt = substr($stmt, 0, strlen($stmt) - strlen($postSep));
 		}
 
 		return array("append_stmt" => $stmt, "data" => $data);
@@ -77,6 +77,7 @@ class MySQLDatabase implements IDatabase {
 				if ($pstmt->rowCount() == 1) {
 					$obj = $obj[0];
 				}
+
 				return $obj;
 			} else {
 				return true;
@@ -95,7 +96,7 @@ class MySQLDatabase implements IDatabase {
 	function select($what, $table, $filter = null) {
 		$data = array();
 		if ($filter instanceof Filter) {
-			$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType());
+			$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType(), " AND ");
 			$data = DatabaseUtility::addToArray($data, $where['data']);
 		}
 		$where = $where['append_stmt'] . " " . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
@@ -133,7 +134,7 @@ class MySQLDatabase implements IDatabase {
 		$data = array();
 		$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType());
 		$data = DatabaseUtility::addToArray($data, $where['data']);
-		$where = " ".$where['append_stmt'] . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
+		$where = " " . $where['append_stmt'] . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
 
 		$stmt = "DELETE FROM " . $table . "" . $where;
 

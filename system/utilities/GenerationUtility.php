@@ -36,7 +36,7 @@ class GenerationUtility {
 		return $list;
 	}
 
-	public static function wrapHtmlTags($tag, $value) {
-		return ("<".str_replace("<", "", str_replace(">", "", $tag)).">".$value."</".str_replace("<", "", str_replace(">", "", $tag)).">");
+	public static function wrapHtmlTags($tag, $value, $extra = "") {
+		return ("<".str_replace("<", "", str_replace(">", "", $tag))."".$extra.">".$value."</".str_replace("<", "", str_replace(">", "", $tag)).">");
 	}
 }

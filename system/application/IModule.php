@@ -41,9 +41,16 @@ interface IModule extends \Supah_Framework\application\IExecutable {
 	function getConfiguration();
 
 	/**
+	 * Gets the application for this module.
+	 *
+	 * @return \Supah_Framework\application\IApplication
+	 */
+	function getApplication();
+
+	/**
 	 * Gets the routes for the Routing class.
 	 *
 	 * @return array
 	 */
-	public function getRoutes();
+	function getRoutes();
 }

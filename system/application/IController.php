@@ -19,10 +19,11 @@ if (!defined("SF_INIT")) {
  */
 interface IController extends IExecutable {
 	/**
-	 * Constructor that accepts a URI and arguments.
+	 * Constructor that accepts a URI, module, and arguments.
 	 *
-	 * @param $uri the URI of the web request.  Passed by a route class.
-	 * @param $args the controller arguments.
+	 * @param $uri string
+	 * @param $module IModule
+	 * @param $args array
 	 */
-	function __construct($uri, $args);
+	function __construct($uri, $module, $args);
 }
