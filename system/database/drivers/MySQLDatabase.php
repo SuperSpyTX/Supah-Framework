@@ -27,7 +27,7 @@ class MySQLDatabase implements IDatabase {
 		$this->mysqlObject = new \PDO($pdo, $database->getConfiguration()->getValue("username"), $database->getConfiguration()->getValue("password"));
 	}
 
-	private function buildList($list, $cmd = "", $sep = "", $postSep = ",") {
+	private function buildParameters($list, $cmd = "", $sep = "", $postSep = ",") {
 		$data = array();
 		$stmt = "";
 		if (is_array($list) && count($list) > 0) {
@@ -37,14 +37,14 @@ class MySQLDatabase implements IDatabase {
 				array_push($data, $value);
 			}
 
-			// Strip the last comma.
+			// Strip the last post sep
 			$stmt = substr($stmt, 0, strlen($stmt) - strlen($postSep));
 		}
 
 		return array("append_stmt" => $stmt, "data" => $data);
 	}
 
-	private function buildArray($array, $cmd = "") {
+	private function buildKVQuery($array, $cmd = "") {
 		$data = array();
 		$ps1 = "(";
 		$ps2 = " " . $cmd . " (";
@@ -86,7 +86,7 @@ class MySQLDatabase implements IDatabase {
 	}
 
 	function insert($table, $entries) {
-		$processed = $this->buildArray($entries, "VALUES");
+		$processed = $this->buildKVQuery($entries, "VALUES");
 		$data = $processed['data'];
 		$stmt = "INSERT INTO " . $table . " " . $processed['append_stmt'];
 
@@ -96,7 +96,7 @@ class MySQLDatabase implements IDatabase {
 	function select($what, $table, $filter = null) {
 		$data = array();
 		if ($filter instanceof Filter) {
-			$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType(), " AND ");
+			$where = $this->buildParameters($filter->getFilter(), "WHERE", $filter->getType(), " AND ");
 			$data = DatabaseUtility::addToArray($data, $where['data']);
 		}
 		$where = $where['append_stmt'] . " " . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
@@ -113,11 +113,11 @@ class MySQLDatabase implements IDatabase {
 
 		$data = array();
 
-		$set = $this->buildList($toSet, "SET");
+		$set = $this->buildParameters($toSet, "SET");
 		$data = DatabaseUtility::addToArray($data, $set['data']);
 		$set = $set['append_stmt'];
 
-		$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType());
+		$where = $this->buildParameters($filter->getFilter(), "WHERE", $filter->getType(), " AND ");
 		$data = DatabaseUtility::addToArray($data, $where['data']);
 		$where = $where['append_stmt'] . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
 
@@ -132,7 +132,7 @@ class MySQLDatabase implements IDatabase {
 		}
 
 		$data = array();
-		$where = $this->buildList($filter->getFilter(), "WHERE", $filter->getType());
+		$where = $this->buildParameters($filter->getFilter(), "WHERE", $filter->getType(), " AND ");
 		$data = DatabaseUtility::addToArray($data, $where['data']);
 		$where = " " . $where['append_stmt'] . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
 
