@@ -23,7 +23,6 @@ class DefaultModule implements \Supah_Framework\application\IModule {
 		include(APP_DIR . "controllers/DefaultController.php");
 		include(APP_DIR . "controllers/ErrorController.php");
 		include(APP_DIR . "routing/DefaultRoute.php");
-		include(APP_DIR . "routing/RouteTest.php");
 		include(APP_DIR . "routing/RouteError.php");
 
 		$this->application->getSystem()->getRouting()->addRoutes($this->getRoutes());
@@ -50,6 +49,6 @@ class DefaultModule implements \Supah_Framework\application\IModule {
 
 	public function getRoutes() {
 		// TODO: configurable application URIs.
-		return array('default' => new DefaultRoute("default", $this), 'error' => new RouteError("error", $this), 'routetest' => new RouteTest("routetest", $this));
+		return array('default' => new DefaultRoute("default", $this), 'error' => new RouteError("error", $this));
 	}
 }
