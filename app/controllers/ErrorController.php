@@ -6,9 +6,10 @@
  */
 
 class ErrorController implements \Supah_Framework\application\IController {
-	private $uri, $args;
+	private $module, $uri, $args;
 
-	function __construct($uri, $args) {
+	function __construct($module, $uri, $args) {
+		$this->module = $module;
 		$this->uri = $uri;
 		$this->args = $args;
 	}
@@ -19,7 +20,7 @@ class ErrorController implements \Supah_Framework\application\IController {
 		$errorCode = substr($this->args['error'], 0, 3);
 		$mainPage = $system->getTemplates()->load("default", "Error Page - " . $errorCode);
 		$errorPage = $system->getTemplates()->load("errors/" . $errorCode);
-		$mainPage->addEntry("content", $errorPage->renderPage());
-		$system->getTemplates()->printPage($mainPage);
+		$mainPage->addEntry("content", $errorPage->exec());
+		echo($mainPage);
 	}
 }

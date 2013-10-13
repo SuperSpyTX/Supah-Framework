@@ -7,15 +7,23 @@
 
 namespace Supah_Framework\application;
 
+use Supah_Framework\Configuration;
+
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
-interface IModule extends \Supah_Framework\application\IExecutable {
+/**
+ * Class IModule
+ * The interface that identifies application modules.
+ *
+ * @package Supah_Framework\application
+ */
+interface IModule extends IExecutable {
 	/**
 	 * Basic constructor.
 	 *
-	 * @param $application \Supah_Framework\application\IApplication
+	 * @param $application IApplication
 	 */
 	function __construct($application);
 
@@ -36,14 +44,14 @@ interface IModule extends \Supah_Framework\application\IExecutable {
 	/**
 	 * Gets the configuration for this module.
 	 *
-	 * @return \Supah_Framework\application\Configuration
+	 * @return Configuration
 	 */
 	function getConfiguration();
 
 	/**
 	 * Gets the application for this module.
 	 *
-	 * @return \Supah_Framework\application\IApplication
+	 * @return IApplication
 	 */
 	function getApplication();
 

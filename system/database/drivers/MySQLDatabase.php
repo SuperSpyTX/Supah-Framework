@@ -19,7 +19,7 @@ if (!defined("SF_INIT")) {
 }
 
 class MySQLDatabase implements IDatabase {
-	private $database, $mysqlObject, $operands;
+	private $database, $mysqlObject;
 
 	function __construct($database) {
 		$this->database = $database;

@@ -5,6 +5,8 @@
  * @author SuperSpyTX
  */
 
+use Supah_Framework\application\IApplication;
+
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
@@ -32,10 +34,14 @@ class DefaultModule implements \Supah_Framework\application\IModule {
 	}
 
 	function getConfiguration() {
-		if ($config == null)
+		if ($this->config == null)
 			$this->config = $this->application->getConfiguration()->getConfig($this->getName());
 
 		return $this->config;
+	}
+
+	function getApplication() {
+		return $this->application;
 	}
 
 	function isEnabled() {

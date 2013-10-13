@@ -21,9 +21,9 @@ interface IController extends IExecutable {
 	/**
 	 * Constructor that accepts a URI, module, and arguments.
 	 *
-	 * @param $uri string
 	 * @param $module IModule
+	 * @param $uri string
 	 * @param $args array
 	 */
-	function __construct($uri, $module, $args);
+	function __construct($module, $uri, $args);
 }

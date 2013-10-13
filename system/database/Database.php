@@ -7,13 +7,27 @@
 
 namespace Supah_Framework;
 
+use Supah_Framework\database\IDatabase;
+
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
-class Database {
+/**
+ * Class Database
+ * The class that allows you to set & get stuff for the application.
+ *
+ * @package Supah_Framework
+ */
+class Database implements IDatabase {
 	private $system, $dbDriver;
 
+	/**
+	 * Constructs the Database class.
+	 *
+	 * @param $system System
+	 * @param $dbDriverName string
+	 */
 	function __construct($system, $dbDriverName) {
 		$this->system = $system;
 		if ($dbDriverName == null) {
@@ -24,18 +38,34 @@ class Database {
 		}
 	}
 
+	/**
+	 * Gets the database driver.
+	 *
+	 * @deprecated The Database class already implements the specific methods that the driver implements, no need to use this!
+	 * @return IDatabase
+	 */
 	function getDriver() {
 		return $this->dbDriver;
 	}
 
+	/**
+	 * Returns whether the database is enabled in the configuration or not.
+	 *
+	 * @return bool
+	 */
 	function isEnabled() {
 		return $this->dbDriver != null;
 	}
 
+	/**
+	 * Gets the configuration
+	 *
+	 * @return Configuration
+	 */
 	function getConfiguration() {
 		return $this->system->getConfiguration()->getConfig("db");
 	}
-
+	
 	function insert($table, $entries) {
 		return $this->dbDriver->insert($table, $entries);
 	}

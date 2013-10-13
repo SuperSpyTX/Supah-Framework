@@ -35,7 +35,7 @@ include(SYSTEM_DIR . "scripts/Script.php");
 include(SYSTEM_DIR . "scripts/Scripts.php");
 
 // Templates
-include(SYSTEM_DIR . "templates/Page.php");
+include(SYSTEM_DIR . "templates/Template.php");
 include(SYSTEM_DIR . "templates/Templates.php");
 
 // Utilities.

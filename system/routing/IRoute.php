@@ -13,7 +13,7 @@ if (!defined("SF_INIT")) {
 
 /**
  * Class IRoute
- * Interface that identifies a route the Routing class can use.
+ * Interface that identifies a route, or a specific URI.
  *
  * @package Supah_Framework\routing
  */
@@ -27,14 +27,16 @@ interface IRoute {
 	public function __construct($uri, $module);
 
 	/**
-	 * Routes the web request to this class.
+	 * Routes the web request through this route.
 	 *
+	 * @param $uri array
 	 * @return void
 	 */
 	function route($uri);
 
 	/**
 	 * Checks if the URI matches the rules specified in the route.
+	 * Usually this is to be used with complicated structures.  Otherwise this should always return true.
 	 *
 	 * @param $uri string
 	 * @return boolean

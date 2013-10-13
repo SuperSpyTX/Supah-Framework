@@ -9,12 +9,14 @@ if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
 
+// This is for my debugging purposes.
+
 /**
  * The base URI of this install.  You can leave this blank if this is running from the root directory.
  * This is used in the routing class.
  */
 // TODO: Make this process automatic.
-define("BASE_URI", "/");
+define("BASE_URI", "/supahframework/");
 
 /**
  * The application directory to load. This is where all the application files lie.

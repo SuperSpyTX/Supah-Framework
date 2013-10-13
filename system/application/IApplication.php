@@ -7,6 +7,9 @@
 
 namespace Supah_Framework\application;
 
+use Supah_Framework\Configuration;
+use Supah_Framework\System;
+
 if (!defined("SF_INIT")) {
 	die("SF_INIT not detected.");
 }
@@ -21,14 +24,14 @@ interface IApplication {
 	/**
 	 * Basic constructor.
 	 *
-	 * @param $system \Supah_Framework\System
+	 * @param $system System
 	 */
 	function __construct($system);
 
 	/**
 	 * Gets the main framework class, known as System.
 	 *
-	 * @return \Supah_Framework\System
+	 * @return System
 	 */
 	function getSystem();
 
@@ -36,7 +39,7 @@ interface IApplication {
 	 * Adds a module.
 	 *
 	 * @param $name string
-	 * @param $class \Supah_Framework\application\IModule
+	 * @param $class IModule
 	 * @return void|bool
 	 */
 	function addModule($name, $class);
@@ -53,14 +56,14 @@ interface IApplication {
 	 * Gets a specific module specified by name.
 	 *
 	 * @param $name string
-	 * @return \Supah_Framework\application\IModule
+	 * @return IModule
 	 */
 	function getModule($name);
 
 	/**
 	 * Gets the configuration class.
 	 *
-	 * @return \Supah_Framework\application\Configuration
+	 * @return Configuration
 	 */
 	function getConfiguration();
 
@@ -81,7 +84,7 @@ interface IApplication {
 	/**
 	 * Gets the modules included in the application.
 	 *
-	 * @return array of modules.
+	 * @return array
 	 */
 	public function getModules();
 }

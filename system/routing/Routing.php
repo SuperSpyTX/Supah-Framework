@@ -7,6 +7,8 @@
 
 namespace Supah_Framework;
 
+use Supah_Framework\application\IExecutable;
+use Supah_Framework\routing\IRoute;
 use Supah_Framework\utilities\URIUtility;
 
 if (!defined("SF_INIT")) {
@@ -15,17 +17,18 @@ if (!defined("SF_INIT")) {
 
 /**
  * Class Routing
- * The framework for routing web requests.
+ * The class mainly responsible for routing URI structures to specific parts in the application.
  *
  * @package Supah_Framework
  */
-class Routing implements \Supah_Framework\application\IExecutable {
+class Routing implements IExecutable {
 	private $system, $routes, $uri;
 
 	/**
 	 * Basic constructor which accepts a URI.
 	 *
-	 * @param $system \Supah_Framework\System
+	 * @param $system System
+	 * @param $uri array
 	 */
 	function __construct($system, $uri) {
 		$this->system = $system;
@@ -36,7 +39,7 @@ class Routing implements \Supah_Framework\application\IExecutable {
 	/**
 	 * Adds multiple routes to the list.
 	 *
-	 * @param $array array of routes.
+	 * @param $array array
 	 */
 	function addRoutes($array) {
 		$this->routes = array_merge($array, $this->routes);
@@ -45,8 +48,8 @@ class Routing implements \Supah_Framework\application\IExecutable {
 	/**
 	 * Adds a route to the list.
 	 *
-	 * @param $uri the URI to route.
-	 * @param $class the route class.
+	 * @param $uri string
+	 * @param $class IRoute
 	 */
 	function addRoute($uri, $class) {
 		$this->addRoutes(array($uri => $class));
@@ -61,20 +64,20 @@ class Routing implements \Supah_Framework\application\IExecutable {
 				$goto = $this->routes[$uri];
 			}
 		} else {
-			if (!isset($this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("default.route", "default")])) {
+			if (!isset($this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("route.default", "default")])) {
 				die("The default template does not exist. What happened?");
 			}
-			$goto = $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("default.route", "default")];
+			$goto = $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("route.default", "default")];
 		}
 
-		if ($goto == null || $goto != $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("default.route", "default")] && !$goto->ruleMatches($fullUri)) {
-			if (!isset($this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("error.route", "error")])) {
+		if ($goto == null || $goto != $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("route.default", "default")] && !$goto->ruleMatches($fullUri)) {
+			if (!isset($this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("route.error", "error")])) {
 				die("The error template does not exist. What happened?");
 			}
-			$goto = $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("error.route", "error")];
+			$goto = $this->routes[$this->system->getApplication()->getConfiguration()->getValueWithDef("route.error", "error")];
 			$goto->route($fullUri);
 		} else {
-			$goto->route(URIUtility::removeFirst($fullUri));
+			$goto->route(($this->system->getApplication()->getConfiguration()->getValueWithDef("route.forward", true) ? URIUtility::removeFirst($fullUri) : $fullUri));
 		}
 	}
 }

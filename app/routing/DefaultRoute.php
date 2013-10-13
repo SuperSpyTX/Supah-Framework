@@ -18,7 +18,7 @@ class DefaultRoute implements Supah_Framework\routing\IRoute {
 	}
 
 	public function route($uri) {
-		$controller = new DefaultController($uri, null);
+		$controller = new DefaultController($this, $uri, null);
 		$controller->exec();
 	}
 

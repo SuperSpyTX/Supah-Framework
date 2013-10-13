@@ -10,9 +10,10 @@ if (!defined("SF_INIT")) {
 }
 
 class DefaultController implements Supah_Framework\application\IController {
-	private $uri, $args;
+	private $module, $uri, $args;
 
-	function __construct($uri, $args) {
+	function __construct($module, $uri, $args) {
+		$this->module = $module;
 		$this->uri = $uri;
 		$this->args = $args;
 	}
@@ -24,25 +25,7 @@ class DefaultController implements Supah_Framework\application\IController {
 		$mainPage = $system->getTemplates()->load("default", $system->getApplication()->getTitle());
 		$defaultContent = $system->getTemplates()->load("default_welcome_message");
 
-		if ($system->getApplication()->isModuleLoaded("jokes")) {
-			$toAdd = "<br><br>" . PHP_EOL . "You should also " . \Supah_Framework\utilities\GenerationUtility::generateLink(BASE_URI . "jokes", "check this out!") . " It's lulzy.";
-			$defaultContent->addEntry("jokesReferral", $toAdd);
-		}
-
-		/*$script = $system->getScripts()->load("default");
-		$toAdd = $script->exec();
-		$defaultContent->addEntry("anonymFunc", $toAdd);*/
-
-		/*
-		if ($system->getDatabase()->isEnabled()) {
-			$toAdd = "<br><br>Time for a database test!<br><br>";
-			$list = $system->getDatabase()->select("*", "mypix_luv", array("gay" => "no"));
-			print_r($list);
-			$toAdd .= \Supah_Framework\utilities\GenerationUtility::generateList($list);
-			$defaultContent->addEntry("dbTest", $toAdd);
-		}*/
-
-		$mainPage->addEntry("content", $defaultContent->renderPage());
-		$system->getTemplates()->printPage($mainPage);
+		$mainPage->addEntry("content", $defaultContent->exec());
+		echo($mainPage);
 	}
 }

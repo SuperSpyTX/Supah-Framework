@@ -11,4 +11,3 @@ include(SYSTEM_DIR . "init.php");
 
 // Now run the framework.
 $system->exec();
-?>
