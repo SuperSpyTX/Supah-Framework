@@ -6,7 +6,7 @@ define("THIS_SCRIPT", "index.php");
 // Include configuration file.
 include("config.inc.php");
 
-// Include the initializer, which initalizes the Supah Framework environment.
+// Include the initializer for the Supah Framework environment.
 include(SYSTEM_DIR . "init.php");
 
 // Now run the framework.
