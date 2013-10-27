@@ -33,7 +33,7 @@ class Template implements IExecutable {
 		$this->template_name = $template_name;
 		$this->template_path = APP_DIR . "templates/" . $template_name . ".tmpl";
 
-		$this->setEntries(($page_title != null ? array('title' => GenerationUtility::generateTitle($page_title)) : array()));
+		$this->setEntries(($page_title != null ? array('title' => GenerationUtility::wrapTags("title", $page_title)) : array()));
 	}
 
 	/**
@@ -60,9 +60,20 @@ class Template implements IExecutable {
 	 * Adds multiple entries to this template.
 	 * See @link #addEntry($key, $value)
 	 *
+	 * @deprecated Please use the more properly named method.  Naming scheme sucks.
 	 * @param $array
 	 */
 	function addMultipleEntries($array) {
+		$this->pagevars = array_merge($array, $this->pagevars);
+	}
+
+	/**
+	 * Adds multiple entries to this template.
+	 * See @link #addEntry($key, $value)
+	 *
+	 * @param $array
+	 */
+	function addEntries($array) {
 		$this->pagevars = array_merge($array, $this->pagevars);
 	}
 
@@ -73,7 +84,7 @@ class Template implements IExecutable {
 	 * @param $value
 	 */
 	function addEntry($key, $value) {
-		$this->addMultipleEntries(array($key => $value));
+		$this->addEntries(array($key => $value));
 	}
 
 	/**

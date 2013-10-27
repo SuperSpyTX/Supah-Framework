@@ -19,14 +19,24 @@ if (!defined("SF_INIT")) {
  */
 class GenerationUtility {
 	/**
-	 * Generates a link. The URI can be a full link or a relative link, which will be based on BASE_URI.
+	 * Generates a HTML link. The URI can be a full link or a relative link, which will be based on BASE_URI.
 	 *
 	 * @param $link string
 	 * @param $comment string
 	 * @return string
 	 */
 	public static function generateLink($link, $comment) {
-		return "<a href=\"" . (StringUtility::startsWith($link, "://") ? $link : substr(BASE_URI, 0, strlen(BASE_URI) - 1)) . "/" . $link . "\">" . $comment . "</a>";
+		return "<a href=\"" . GenerationUtility::generateBaseLink($link) . "\">" . $comment . "</a>";
+	}
+
+	/**
+	 * Generates a link. The URI can be a full link or a relative link, which will be based on BASE_URI.
+	 *
+	 * @param $link
+	 * @return string
+	 */
+	public static function generateBaseLink($link) {
+		return (StringUtility::startsWith($link, "://") ? $link : substr(BASE_URI, 0, strlen(BASE_URI) - 1)) . "/" . $link;
 	}
 
 	/**

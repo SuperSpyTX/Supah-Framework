@@ -37,7 +37,7 @@ class Script implements IExecutable {
 	/**
 	 * Executes the script.
 	 *
-	 * @return bool|void
+	 * @return mixed
 	 */
 	function exec() {
 		if (!file_exists($this->getPath())) {
