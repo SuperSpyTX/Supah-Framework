@@ -74,4 +74,15 @@ class Filter {
 	function getCompressResult() {
 		return $this->compressResult;
 	}
+
+	/**
+	 * Sets whether this should compress the row or not into a single array
+	 * NOTE: Only results that return ONE row will have this effect!
+	 * WARNING: This is implementation specific!
+	 *
+	 * @param bool
+	 */
+	function setCompressResult($bool) {
+		$this->compressResult = $bool;
+	}
 }
