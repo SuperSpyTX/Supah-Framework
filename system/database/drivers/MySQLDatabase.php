@@ -63,7 +63,7 @@ class MySQLDatabase implements IDatabase {
 		return array("append_stmt" => $ps1 . $ps2, "data" => $data);
 	}
 
-	private function query($query, $data) {
+	private function query($query, $data, $compress = false) {
 		$pstmt = $this->mysqlObject->prepare($query);
 
 		if (!$pstmt->execute($data)) {
@@ -74,7 +74,7 @@ class MySQLDatabase implements IDatabase {
 				if (!$obj) {
 					return true;
 				}
-				if ($pstmt->rowCount() == 1) {
+				if ($pstmt->rowCount() == 1 && $compress) {
 					$obj = $obj[0];
 				}
 
@@ -95,15 +95,18 @@ class MySQLDatabase implements IDatabase {
 
 	function select($what, $table, $filter = null) {
 		$data = array();
+		$where = array();
+		$compress = false;
 		if ($filter instanceof Filter) {
 			$where = $this->buildParameters($filter->getFilter(), "WHERE", $filter->getType(), " AND ");
 			$data = DatabaseUtility::addToArray($data, $where['data']);
+			$compress = $filter->getCompressResult();
 		}
 		$where = $where['append_stmt'] . " " . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
 
 		$stmt = "SELECT " . $what . " FROM " . $table . "" . $where;
 
-		return $this->query($stmt, $data);
+		return $this->query($stmt, $data, $compress);
 	}
 
 	function update($table, $toSet, $filter) {
@@ -120,10 +123,11 @@ class MySQLDatabase implements IDatabase {
 		$where = $this->buildParameters($filter->getFilter(), "WHERE", $filter->getType(), " AND ");
 		$data = DatabaseUtility::addToArray($data, $where['data']);
 		$where = $where['append_stmt'] . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
+		$compress = $filter->getCompressResult();
 
 		$stmt = "UPDATE " . $table . "" . $set . "" . $where;
 
-		return $this->query($stmt, $data);
+		return $this->query($stmt, $data, $compress);
 	}
 
 	function delete($table, $filter) {
@@ -135,10 +139,11 @@ class MySQLDatabase implements IDatabase {
 		$where = $this->buildParameters($filter->getFilter(), "WHERE", $filter->getType(), " AND ");
 		$data = DatabaseUtility::addToArray($data, $where['data']);
 		$where = " " . $where['append_stmt'] . ($filter instanceof Filter ? $filter->getAdditionalQueryData() : "");
+		$compress = $filter->getCompressResult();
 
 		$stmt = "DELETE FROM " . $table . "" . $where;
 
-		return $this->query($stmt, $data);
+		return $this->query($stmt, $data, $compress);
 	}
 }
 
