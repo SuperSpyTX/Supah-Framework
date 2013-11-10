@@ -1,7 +1,7 @@
 <?php
 /**
  * Class Filter.php
- * 
+ *
  * @author SuperSpyTX
  */
 
@@ -28,7 +28,7 @@ class Filter {
 	 * @param string $additionalQueryData string
 	 * @param bool $compressResult bool
 	 */
-	function __construct($filter = array(), $matchType = FILTER_EQUALS, $additionalQueryData = "", $compressResult = false)  {
+	function __construct($filter = array(), $matchType = FILTER_EQUALS, $additionalQueryData = "", $compressResult = false) {
 		$this->filter = $filter;
 		$this->matchType = $matchType;
 		$this->additionalQueryData = $additionalQueryData;

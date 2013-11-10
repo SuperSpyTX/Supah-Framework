@@ -1,7 +1,7 @@
 <?php
 /**
  * Class IDatabase.php
- * 
+ *
  * @author SuperSpyTX
  */
 

@@ -65,7 +65,7 @@ class Database implements IDatabase {
 	function getConfiguration() {
 		return $this->system->getConfiguration()->getConfig("db");
 	}
-	
+
 	function insert($table, $entries) {
 		return $this->dbDriver->insert($table, $entries);
 	}

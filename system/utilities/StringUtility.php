@@ -51,6 +51,7 @@ class StringUtility {
 	public static function htmlentities($string) {
 		$newStr = htmlentities($string);
 		$newStr = str_replace(" ", "&nbsp;", $newStr);
+
 		return $newStr;
 	}
 
@@ -65,6 +66,7 @@ class StringUtility {
 		$str = "";
 		for ($i = 0; $i < $length; $i++)
 			$str .= $arr[rand(0, count($arr))];
+
 		return $str;
 	}
 }

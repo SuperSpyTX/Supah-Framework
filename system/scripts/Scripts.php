@@ -1,7 +1,7 @@
 <?php
 /**
  * Class Scripts.php
- * 
+ *
  * @author SuperSpyTX
  */
 
