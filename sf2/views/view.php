@@ -10,20 +10,29 @@ namespace Supah_Framework\Views;
 
 class View {
     private $templateName = "";
+    private $disableShortcut = false;
 
     public static function create($templateName) {
         //        echo($templateName);
         $view = new View();
         $view->templateName = $templateName;
 
+        global $config;
+//        var_dump($config);
+        $view->disableShortcut = $config->sf2->views['auto_shortcut_create'];
+
         return $view;
+    }
+
+    public function toggleShortcut($bool) {
+        $this->disableShortcut = $bool;
     }
 
     public function output($return) {
         $rfc = new \ReflectionObject($this);
         $vars = [];
         foreach ($rfc->getProperties() as $property) {
-            if ($property->name != "templateName") {
+            if ($property->name != "templateName" && $property->name != "disableShortcut") {
                 $name = $property->getName();
                 $value = $property->getValue($this);
                 $vars[$name] = $value;
@@ -42,26 +51,14 @@ class View {
         }
     }
 
-    public function __get($name) {
-        if (!isset($this->$name)) {
-            return $this::create($name);
-        }
-
-        return $this->$name;
-    }
-
     public function __set($name, $value) {
-        if (isset($this->$name) && is_string($this->$name)) {
-            // holy shit magic!
-            $origVal = $this->$name;
-            $this->$name = $this::create($origVal);
-            foreach ($value as $k => $v) {
-                $this->$name->$k = $v;
-            }
-        } else {
-            $this->$name = $value;
+        global $config;
+        if ($this->disableShortcut && stripos(substr($value, 0, strlen($config->sf2->views['shortcut_create'])), $config->sf2->views['shortcut_create']) !== false) {
+            $this->$name = View::create(substr($value, strlen($config->sf2->views['shortcut_create'])));
+
+            return;
         }
-//        $this->$name = $value;
+        $this->$name = $value;
     }
 
     public function __toString() {

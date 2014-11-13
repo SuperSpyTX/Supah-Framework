@@ -1,1 +1,1 @@
-Welcome to Supah Framework 2! <?=$mymsg?>
+Welcome to Supah Framework 2! <?=$mymsg?><br/><br/><?=$wat;?>

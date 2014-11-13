@@ -17,5 +17,8 @@ $autoload = new \Bootstrap\Autoload([
         'sf2/facades'
     ]
 ]);
-$config = new \Supah_Framework\Config\Multiconfiguration();
+$config = new \Supah_Framework\Config\Multi_Configuration();
+
+$config->attach("sf2/config/sf2");
 $config->attach("app/config/app");
+$config->attach("app/config/sf2");

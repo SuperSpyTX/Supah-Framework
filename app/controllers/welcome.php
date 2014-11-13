@@ -11,16 +11,11 @@ namespace Application\Controllers;
 class Welcome {
     public function index($name) {
         $view = \View::create("welcome");
-        global $config;
-        $view->mymsg = $config->app->test;
-        $view->wat = "dnd";
-        $view->wat->fuf = "FUF!";
-        var_dump($view);
 
+        $view->mymsg = \Dynconfig::app()->test;
 
-//        $config = $config->getObject();
-//        var_dump($config);
-
+        $view->wat = "--dnd";
+        $view->wat->fuf = "FuuuF!";
 
         return $view;
     }

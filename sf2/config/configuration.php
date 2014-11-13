@@ -13,6 +13,9 @@ class Configuration {
 
     public function __construct($file) {
         include $file.".php";
+        if (!isset($CFG)) {
+            return;
+        }
         foreach ($CFG as $k => $v) {
             $this->$k = $v;
         }

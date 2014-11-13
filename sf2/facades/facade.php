@@ -55,9 +55,14 @@ class Facade {
     public function __call($method, $args) {
         $rfc = new \ReflectionClass($this::$className);
         $instance = $rfc->newInstanceWithoutConstructor();
-
         if ($this->object != null) {
             $instance = $this->object;
+        }
+
+        // Special condition.
+        if ($rfc->hasMethod($method) == false && $rfc->getMethod("__call")) {
+            $args = array_merge([$method], $args);
+            $method = "__call";
         }
 
         return $rfc->getMethod($method)->invokeArgs($instance, $args);
@@ -80,6 +85,16 @@ class Facade {
     public static function __callStatic($method, $args) {
         $rfc1 = new \ReflectionClass(get_called_class());
         $rfc = new \ReflectionClass($rfc1->getProperty('className')->getValue(null));
+
+        if (empty($args)) {
+            $args = [null];
+        }
+
+        // Special condition.
+        if ($rfc->hasMethod($method) == false && $rfc->getMethod("__callStatic")) {
+            $args = array_merge([$method], $args);
+            $method = "__callStatic";
+        }
 
         return $rfc->getMethod($method)->invokeArgs(null, $args);
     }

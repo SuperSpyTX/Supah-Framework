@@ -8,4 +8,4 @@
 
 class Config extends \Supah_Framework\Facades\Facade {
     static $className = 'Supah_Framework\Config\Configuration';
-} 
+}

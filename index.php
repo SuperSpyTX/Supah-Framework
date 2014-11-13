@@ -7,7 +7,8 @@ include "app/routes.php";
 
 $view = Routes::route($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
 
-echo $view;
+//echo $view;
+echo $view->output(false);
 
 //echo ob_get_contents();
 

@@ -7,5 +7,5 @@
  */
 
 class Multiconfig extends \Supah_Framework\Facades\Facade {
-    static $className = 'Supah_Framework\Config\Multiconfiguration';
+    static $className = 'Supah_Framework\Config\Multi_Configuration';
 }
