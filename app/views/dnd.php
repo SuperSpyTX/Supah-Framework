@@ -1,0 +1,1 @@
+WOW HOLY <?=$fuf;?>

@@ -1,0 +1,1 @@
+Welcome to Supah Framework 2! <?=$mymsg?>
