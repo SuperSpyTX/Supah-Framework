@@ -8,7 +8,7 @@
 
 namespace SupahFramework2\Routing;
 
-class Route {
+class DefinedRoute {
     private $handler, $method, $data;
 
     public function __construct(&$routeInfoArr) {

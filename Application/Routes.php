@@ -9,6 +9,6 @@
 return function (\SupahFramework2\Routing\RouteCollector $r) {
     $r->addRoute('GET', '/test', 'Welcome@index2');
     $r->add404(function () {
-            echo("hai!!!");
+            echo("hai whalecum to my 404 page");
         });
 };

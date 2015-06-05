@@ -11,6 +11,4 @@ Run ```composer update``` on command line and then feel free to build to your he
 License
 ======================
 
-GNU General Public License, version 2 (GPL-2.0)
-
 See LICENSE.txt for more information.

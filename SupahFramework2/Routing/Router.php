@@ -8,7 +8,6 @@
 
 namespace SupahFramework2\Routing;
 
-
 class Router {
     private static $dispatcher;
     private static $errorHandlers = [];
@@ -18,7 +17,7 @@ class Router {
         $results = null;
         switch ($routeInfo[0]) {
             case \FastRoute\Dispatcher::FOUND:
-                $route = new Route($routeInfo);
+                $route = new DefinedRoute($routeInfo);
                 $results = $route->dispatch();
                 break;
             case \FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
@@ -34,7 +33,10 @@ class Router {
         // TODO: maybe dynamically parse it or some shit?
         // TODO: Add ob flushing support.
         // TODO: Create a response object that'll dictate how the output should be printed to browser.
-        if ($results != null) {
+        if ($results instanceof ResponseObject) {
+            // TODO: do some actual parsing.
+            echo $results->content;
+        } else if ($results != null) {
             echo $results;
         }
     }

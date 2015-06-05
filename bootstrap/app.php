@@ -6,6 +6,8 @@
  * Time: 2:46 AM
  */
 
+resolve('router')->collect(require_once(APPLICATION_PATH.'/Routes.php'));
+
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 

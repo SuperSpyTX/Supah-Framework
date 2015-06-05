@@ -6,7 +6,9 @@
     "type": "project",
     "require": {
         "vlucas/phpdotenv": "~1.0",
-        "nikic/fast-route": "dev-master"
+        "nikic/fast-route": "dev-master",
+        "doctrine/orm": "^2.5",
+        "doctrine/cache": "^1.4"
     },
     "autoload": {
         "psr-4": {
