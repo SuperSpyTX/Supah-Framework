@@ -6,20 +6,17 @@
  * Time: 12:36 AM
  */
 
-namespace Supah_Framework\Views;
+namespace SupahFramework2\Views;
 
 class View {
     private $templateName = "";
     private $disableShortcut = false;
 
     public static function create($templateName) {
-        //        echo($templateName);
         $view = new View();
         $view->templateName = $templateName;
 
-        global $config;
-//        var_dump($config);
-        $view->disableShortcut = $config->sf2->views['auto_shortcut_create'];
+        $view->disableShortcut = resolve('configuration')->sf2()->views['auto_shortcut_create'];
 
         return $view;
     }
@@ -41,7 +38,7 @@ class View {
 
         ob_start();
         extract($vars);
-        include("app/views/" . $this->templateName . ".php");
+        include(APPLICATION_PATH . "/Web/Views/" . ucfirst($this->templateName) . ".php");
         $str = ob_get_clean();
 
         if (!$return) {
@@ -52,9 +49,8 @@ class View {
     }
 
     public function __set($name, $value) {
-        global $config;
-        if ($this->disableShortcut && stripos(substr($value, 0, strlen($config->sf2->views['shortcut_create'])), $config->sf2->views['shortcut_create']) !== false) {
-            $this->$name = View::create(substr($value, strlen($config->sf2->views['shortcut_create'])));
+        if ($this->disableShortcut && stripos(substr($value, 0, strlen(resolve('configuration')->sf2()->views['shortcut_create'])), resolve('configuration')->sf2()->views['shortcut_create']) !== false) {
+            $this->$name = View::create(substr($value, strlen(resolve('configuration')->sf2()->views['shortcut_create'])));
 
             return;
         }

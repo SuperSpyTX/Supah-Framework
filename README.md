@@ -1,18 +1,12 @@
 Supah Framework 2
 ======================
 
-A newer, less Symfony (20MB) component PHP framework that will make you rethink about using composer (kidding).
-
-It's still in development, but this will have new features like:
-
-* Better database ORM
-* Simplistic template management
-* Ease of dependencies
-* Better security
+The most boring framework you've ever used.
 
 How to use
 ======================
-TODO
+
+Run ```composer update``` on command line and then feel free to build to your heart's content!
 
 License
 ======================

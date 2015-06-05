@@ -6,9 +6,13 @@
  * Time: 12:22 PM
  */
 
-namespace Supah_Framework\Config;
-
-class Multi_Configuration {
+namespace SupahFramework2\Configuration;
+/**
+ * @deprecated
+ * Class MultiConfiguration
+ * @package SupahFramework2\Configuration
+ */
+class MultiConfiguration {
     public function attach($file) {
         $this->attachWithAlias($file, null);
     }
@@ -18,7 +22,7 @@ class Multi_Configuration {
             $alias = pathinfo($file, PATHINFO_FILENAME);
         }
         if (isset($this->$alias)) {
-            $newConfig = new Configuration($file);
+            $newConfig = new StandardConfigurationFile($file);
 
             $rfc = new \ReflectionObject($newConfig);
             foreach ($rfc->getProperties() as $property) {
@@ -27,7 +31,7 @@ class Multi_Configuration {
                 $this->$alias->$name = array_replace_recursive($this->$alias->$name, $value);
             }
         } else {
-            $this->$alias = new Configuration($file);
+            $this->$alias = new StandardConfigurationFile($file);
         }
     }
 }

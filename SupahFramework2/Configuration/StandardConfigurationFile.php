@@ -6,10 +6,9 @@
  * Time: 12:22 PM
  */
 
-namespace Supah_Framework\Config;
+namespace SupahFramework2\Configuration;
 
-
-class Configuration {
+class StandardConfigurationFile {
 
     public function __construct($file) {
         include $file.".php";

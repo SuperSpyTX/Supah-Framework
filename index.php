@@ -1,15 +1,7 @@
 <?php
 
 include "bootstrap/boot.php";
-include "app/routes.php";
 
-//ob_start();
+//resolve('router')->dispatch('GET', '/test');
 
-$view = Routes::route($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
-
-//echo $view;
-echo $view->output(false);
-
-//echo ob_get_contents();
-
-//ob_end_flush();
+resolve('router')->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);

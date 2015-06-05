@@ -8,4 +8,7 @@
 
 /* SF2 Specific Setting Overrides */
 
-$CFG['views']['shortcut_create'] = "--";
+//$CFG['views']['shortcut_create'] = "--";
+
+//$CFG['doctrine']['enabled'] = false;
+//$CFG['doctrine']['devmode'] = false;
