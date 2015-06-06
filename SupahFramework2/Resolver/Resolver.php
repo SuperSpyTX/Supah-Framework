@@ -9,11 +9,16 @@
 namespace SupahFramework2\Resolver;
 
 class Resolver {
+    private static $composerIndex = -1;
     private static $mappings = [], $namespaces = [];
 
     public static function __callStatic($method, $args) {
         if (isset(self::$mappings[$method])) {
-            $resolveClass = new self::$mappings[$method]($args);
+            if (sizeof(array_filter($args)) > 0) {
+                $resolveClass = new self::$mappings[$method]($args);
+            } else {
+                $resolveClass = new self::$mappings[$method]();
+            }
 
             return $resolveClass;
         }
@@ -22,25 +27,28 @@ class Resolver {
             if (class_exists($namespace . "\\" . ucfirst($method), true)) {
                 self::$mappings[$method] = $namespace . "\\" . $method;
 
-                // Not a huge fan of this atm.
-                /*
-  if (!defined("PERFORMANCE_MODE")) {
-                    $class = $namespace . "\\" . $method;
-                    if (strpos($method, "\\") !== false) {
-                        $index = strrpos($method, "\\");
-                        $method = substr($method, $index + 1);
-                        $method = strtolower($method);
-                    }
+                return self::__callStatic($method, $args);
+            }
+        }
 
-                    self::$mappings[$method] = $class;
-                }*/
+        $arr = self::getClasses();
+        foreach ($arr as $class) {
+            $idx = $class;
+            if (strpos($class, "\\") !== false) {
+                $idx = substr($class, strrpos($class, "\\") + 1);
+            }
+            if ($idx == ucfirst($method)) {
+                self::$mappings[strtolower($idx)] = $class;
 
                 return self::__callStatic($method, $args);
-
             }
         }
 
         return null;
+    }
+
+    private static function getClasses() {
+        return array_slice(get_declared_classes(), self::$composerIndex + 1);
     }
 
     public static function hookFunction() {
@@ -48,6 +56,20 @@ class Resolver {
 
             // Just don't ask why :P
             eval('function resolve($name) {$args = func_get_args();array_shift($args); return ' . get_class(new Resolver) . '::$name($args);}');
+        }
+
+        // get the index in get_declared_classes()
+        if (self::$composerIndex == -1) {
+            $arr = get_declared_classes();
+            $prefix = "ComposerAutoloader";
+            $i = 0;
+            foreach ($arr as $className) {
+                if (substr($className, 0, strlen($prefix)) == $prefix) {
+                    self::$composerIndex = $i;
+                    break;
+                }
+                $i++;
+            }
         }
     }
 

@@ -8,11 +8,14 @@
 
 /* SF2 Main Settings (please note, make overrides in sf2.php in the app folder! */
 
+// Routing
+$CFG['routing']['base_uri'] = '/';
+
 // Views
 $CFG['views']['shortcut_create'] = "./";
 $CFG['views']['auto_shortcut_create'] = true;
 
-// Doctrine boot
+// Doctrine
 $CFG['doctrine']['enabled'] = false;
 $CFG['doctrine']['devmode'] = true;
 $CFG['doctrine']['connection'] = array(

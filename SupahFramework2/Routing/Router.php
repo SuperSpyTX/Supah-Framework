@@ -13,6 +13,15 @@ class Router {
     private static $errorHandlers = [];
 
     public static function dispatch($httpMethod, $httpURI) {
+        $baseURI = resolve('configuration')->sf2()->routing['base_uri'];
+        $httpURI = parse_url($httpURI)['path'];
+        if (substr($baseURI, strlen($baseURI) - 1) == '/') {
+            $baseURI = substr($baseURI, 0, strlen($baseURI) - 1);
+        }
+        if ($baseURI != '/') {
+            $httpURI = str_replace($baseURI, "", $httpURI);
+        }
+
         $routeInfo = self::$dispatcher->dispatch($httpMethod, $httpURI);
         $results = null;
         switch ($routeInfo[0]) {
@@ -42,7 +51,9 @@ class Router {
     }
 
     public static function collect($funcCallback) {
-        self::$dispatcher = \FastRoute\simpleDispatcher($funcCallback, ['routeCollector' => 'SupahFramework2\\Routing\\RouteCollector']);
+        if (self::$dispatcher == null) {
+            self::$dispatcher = \FastRoute\simpleDispatcher($funcCallback, ['routeCollector' => 'SupahFramework2\\Routing\\RouteCollector']);
+        }
     }
 
     public static function addErrorHandler($errorCode, $handler) {

@@ -8,7 +8,8 @@
         "vlucas/phpdotenv": "~1.0",
         "nikic/fast-route": "dev-master",
         "doctrine/orm": "^2.5",
-        "doctrine/cache": "^1.4"
+        "doctrine/cache": "^1.4",
+        "joomla/input": "^1.2"
     },
     "autoload": {
         "psr-4": {
